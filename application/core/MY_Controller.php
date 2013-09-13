@@ -6,7 +6,13 @@ abstract class MY_Controller extends CI_Controller {
         parent::__construct();
 		
 			
-        // TODO: check if admin, else redirect to login
+        //  check if admin, else redirect to login
+         if (!$this->session->userdata('userloggedin'))
+			{	
+			 $target= base_url().'user/login';
+			 header("Location: " . $target);				
+			 exit();
+			}
     }
 
 }
