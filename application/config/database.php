@@ -50,7 +50,7 @@ $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'websibiz_hub';
-$db['default']['password'] = 'Pass21zz@#$';
+$db['default']['password'] = '*********';
 $db['default']['database'] = 'websibiz_hub';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
