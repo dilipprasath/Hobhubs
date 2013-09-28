@@ -1,6 +1,6 @@
 <div class="login_box">
 
-<h2>Error validating access token!</h2>
+<h2 class="text-error">Error validating access token!</h2>
 <p>Unfortunately we are unable to process your request at this time.<br />
 Error validating access token: This may be because the user logged out or may be due to a system error..</p>
 

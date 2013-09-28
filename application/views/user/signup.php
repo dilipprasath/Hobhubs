@@ -1,22 +1,23 @@
 <!-- popup form start --> 
 <a href="#x" class="overlay" id="login_form"></a>
-<div class="popup login_box">
+<div class="login_box">
 <div class="row-fluid">
 <h4 class="lp_color">Sign up with Email</h4>
 <form action="<?php echo base_url('user/auth') ?>" method="post" name="login_form" >
 <div class="row-fluid">
-<input name="firstname" type="text" class=" input_fname padding2 span6"  placeholder="First Name" required />
-<input name="lastname" type="text" class="input_lname padding2 span6" placeholder="Last Name"  required />
+<?php  echo validation_errors('<div class="text-error">', '</div>') ?>
+<input name="firstname" type="text" class=" input_fname padding2 span6" value="<?php echo $this->input->post('firstname'); ?>" required />
+<input name="lastname" type="text" class="input_lname padding2 span6" value="<?php echo $this->input->post('lastname'); ?>"  required />
 </div>
-<input name="email" type="email" class="input_emailer padding2 span12" placeholder="Email / User Name"  required />
+<input name="email" type="email" class="input_emailer padding2 span12" value="<?php echo $this->input->post('email'); ?>"  required />
 <div id="myform">      
 <input name="password" type="password" class="input_username span12 padding2 " placeholder="Password" id="password" title="Password should contain atleast 1 (special characters, Numbers, Uppercase & Lowercase Letter)" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])^\D.{6,}"  />
 </div>
 <input name="passconf" type="password" class="input_password span12 padding2" placeholder="Confirm  Password" id="passwordconf"  oninput="check(this)" required 
 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])^\D.{6,}" />
 <div class="birthday_cal">      
-<select required name="birthday_month" id="month" class="span3" required>
-<option value="" selected="1">Month</option>
+<select required name="birthday_month" id="month" class="span3" >
+<option value="0" selected="1">Month</option>
 <option value="1">Jan</option>
 <option value="2">Feb</option>
 <option value="3">Mar</option>
@@ -30,8 +31,8 @@ pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])^\D.{6,}" />
 <option value="11">Nov</option>
 <option value="12">Dec</option>
 </select>
-<select required name="birthday_day" id="day" class="span3" required>
-<option value="" selected="1">Day</option>
+<select required name="birthday_day" id="day" class="span3">
+<option value="0" selected="1">Day</option>
 <option value="1">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
@@ -64,8 +65,8 @@ pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])^\D.{6,}" />
 <option value="30">30</option>
 <option value="31">31</option>
 </select>
-<select required name="birthday_year" id="year" class="span3" required>
-<option value="" selected="1">Year</option>
+<select required name="birthday_year" id="year" class="span3">
+<option value="0" selected="1">Year</option>
 <option value="2013">2013</option>
 <option value="2012">2012</option>
 <option value="2011">2011</option>
@@ -178,46 +179,20 @@ pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])^\D.{6,}" />
 </select>
 <span class="dob_title hidden-phone">Birthday</span>
 </div>
-<div class="row-fluid">
-<label class="radio form-inline">
-<input type="radio" name="gender" class="input_radio" value="male" required>Male
-</label>&nbsp;
-<label class="radio form-inline">
+<div class="row-fluid form-inline">
+<label class="radio">
+<input type="radio" name="gender" class="input_radio" value="male" required>Male &nbsp;
+</label>
+<label class="radio">
 <input type="radio" name="gender" class="input_radio" value="female" required>
 Female
 </label>
 </div>
-<a href="#close"> <input type="button" value="Cancel" class=" hh_button span6 "></a>
+<br />
+
+<a href="<?php echo base_url() ?>"> <input type="button" value="Cancel" class=" hh_button span6 "></a>
 <input type="submit" value="Sign Up" class="hh_button span6  " >
 </form>
 </div>
 </div>
 <!-- popup form end --> 
-<div class="login_box">
-<h4 class="lp_color">Login</h4>
-<?php  echo validation_errors() ?>
-<form method="post" class="bs-docs-example" style="padding-bottom: 15px;">
-<div class="docs_input_box row-fluid">
-<input type="text" name="username" class="input-block-level f_name padding2 span12" placeholder="Email" required >
-<input  type="password"  name="password"class="input-block-level l_name padding2 span12" placeholder="Password" required >
-</div>
-<div><a href="<?php echo base_url('user/account_recovery') ?>">Can't access your account?</a><br></div>
-<div class="hh_cbbox">
-<label class="checkbox">
-<input type="checkbox"> Keep Me Logged In
-</label>
-</div>
-<div class="row-fluid">
-<input type="submit" value="Login"class="hh_button span12" />
-</div>
-</form>
-<h4 class="lp_color">Login / Sign Up</h4>
-<div class="row-fluid map_img">
-<img src="<?php echo asset_url('img/fb-tw-logo.jpg') ?>" width="250" height="37" border="0" usemap="#Map" class="fb_tw_logo">
-<map name="Map">
-<area shape="rect" coords="1,3,128,40" href="<?php echo base_url('user/facebook_request'); ?>"  alt="Facebook Sign Up">
-<area shape="rect" coords="130,2,253,38" href="http://www.twitter.com" target="_blank" alt="Twitter Sign Up">
-</map><br><br>
-<a href="#login_form"><input type="submit" value="Sign Up with Email"class="hh_button span8" /></a>   
-</div>
-</div>
