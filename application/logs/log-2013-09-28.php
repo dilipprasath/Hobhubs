@@ -78,3 +78,20 @@ ERROR - 2013-09-28 08:48:53 --> Severity: 8192  --> mysql_pconnect(): The mysql 
 ERROR - 2013-09-28 08:49:03 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\github\Hobhubs\system\database\drivers\mysql\mysql_driver.php 91
 ERROR - 2013-09-28 08:49:03 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\github\Hobhubs\system\database\drivers\mysql\mysql_driver.php 91
 ERROR - 2013-09-28 08:49:03 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\github\Hobhubs\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2013-09-28 09:21:55 --> 404 Page Not Found --> user/fb_user_password
+ERROR - 2013-09-28 09:22:12 --> 404 Page Not Found --> user/fb_user_newpassword
+ERROR - 2013-09-28 09:30:10 --> 404 Page Not Found --> user/select_hobby
+ERROR - 2013-09-28 09:30:23 --> 404 Page Not Found --> user/profile_photo
+ERROR - 2013-09-28 15:56:11 --> Severity: Warning  --> mysql_pconnect(): No connection could be made because the target machine actively refused it.
+ C:\xampp\htdocs\Hobhubs\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2013-09-28 15:56:12 --> Unable to connect to the database
+ERROR - 2013-09-28 15:56:46 --> Severity: Warning  --> mysql_pconnect(): No connection could be made because the target machine actively refused it.
+ C:\xampp\htdocs\Hobhubs\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2013-09-28 15:56:46 --> Unable to connect to the database
+ERROR - 2013-09-28 15:59:12 --> Severity: Warning  --> mysql_pconnect(): No connection could be made because the target machine actively refused it.
+ C:\xampp\htdocs\Hobhubs\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2013-09-28 15:59:12 --> Unable to connect to the database
+ERROR - 2013-09-28 16:03:26 --> Severity: Notice  --> Undefined property: Home::$upload C:\xampp\htdocs\Hobhubs\application\controllers\home.php 77
+ERROR - 2013-09-28 16:07:41 --> 404 Page Not Found --> home/gplus_user_newpassword
+ERROR - 2013-09-28 16:09:24 --> 404 Page Not Found --> home/validation_email
+ERROR - 2013-09-28 16:09:33 --> 404 Page Not Found --> user/validation_email

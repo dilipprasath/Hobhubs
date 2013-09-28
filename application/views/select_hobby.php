@@ -8,7 +8,7 @@
 <?php endif ?>
 <!--Hobby box1 start-->
 <form method="post" action="" >
-<select multiple="multiple" name="groups[]" class="image-picker  limit_callback" data-limit="3">
+<select multiple="multiple" name="groups[]" class="image-picker  limit_callback">
   <option data-img-src="img/logo1.png" value="1">Blogging</option>
   <option data-img-src="img/logo2.png" value="2">Cooking</option>
   <option data-img-src="img/logo3.png" value="3">Dance</option>

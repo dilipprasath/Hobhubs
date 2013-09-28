@@ -19,7 +19,17 @@ class Home extends MY_Controller {
         redirect($target,'refresh');
     	
     }
-
+	
+	public function fb_user_newpassword()
+	{
+		$this->template->set('title', 'Change password');
+        $this->template->load('layouts/main', 'user/fb_user_newpassword');
+	}
+	public function gplus_user_newpassword()
+	{
+		$this->template->set('title', 'Change password');
+        $this->template->load('layouts/main', 'user/gplus_user_newpassword');
+	}
     /**
      * undocumented function
      *
@@ -30,6 +40,7 @@ class Home extends MY_Controller {
         $data="";
         if($this->input->post("checkval"))      
         {
+			
             if($this->input->post('groups'))
             {
               $this->home_model->insert_hobby();
