@@ -11,14 +11,27 @@ class Home extends MY_Controller {
     }
 
 
-
-
     public function index() {
+
+        $this->db->where('user_id',$this->session->userdata('user_id'));
+        $query = $this->db->get('group_list');
+
+        if($query->num_rows() > 0)
+        {
+            echo "Create profile page for user";
+            echo '<a href="' . base_url(). "profile_photo" .'"> profile photo </a><br/>' ;
+            echo '<a href="' . base_url(). "select_hobby" .'"> select_hobby </a>' ;
+        }
+        else
+        {
+           $target= base_url().'select_hobby'; 
+            redirect($target,'refresh');
+        }
+
         //todo:check if user not select hobbies than redirect select_hobby
-        $target= base_url().'select_hobby'; 
-        redirect($target,'refresh');
     	
     }
+
 	
 	public function fb_user_newpassword()
 	{
@@ -30,6 +43,7 @@ class Home extends MY_Controller {
 		$this->template->set('title', 'Change password');
         $this->template->load('layouts/main', 'user/gplus_user_newpassword');
 	}
+
     /**
      * undocumented function
      *
@@ -68,88 +82,87 @@ class Home extends MY_Controller {
         
         if($this->input->post('checkval'))
         {
-            $config['upload_path'] = './uploads/';
+            $config['upload_path'] = './uploads/user_photos/temp';
             $config['allowed_types'] = 'gif|jpg|png';
-            $config['max_size'] = '100';
-            $config['max_width'] = '1024';
-            $config['max_height'] = '768';
-
+            $config['max_size'] = '1024';
+            $config['max_width'] = '1920';
+            $config['max_height'] = '1200';
+            $config['file_name'] = $this->session->userdata('user_id');
             $this->load->library('upload', $config);
 
-            //$this->load->library('upload');
-      
-            $this->upload->do_upload();
-            
-            exit(0);
-
-            if (!$this->upload->do_upload('sts'))
+            if (!$this->upload->do_upload())
             {
                 $error = array('error' => $this->upload->display_errors());
                 print_r($error);
-                exit(0);
-                // $this->template->set('title', 'My website');
-                // $this->template->load('layouts/main', 'profile_photo',$error);
+                $this->template->set('title', 'My website');
+                $this->template->load('layouts/main', 'profile_photo',$error);
             }
             else
             {
-                $data = array('upload_data' => $this->upload->data());
-                print_r($data);
-                // $this->load->view('upload_success', $data);
-                exit(0);
+                $data = $this->upload->data();
+                $this->load->library('image_lib');
+                $config['source_image'] = 'uploads/user_photos/temp/'.$data['file_name'];
+                $config['maintain_ratio'] = TRUE;
+                $config['width']  = 400;
+                $config['height'] = 600;
+
+                $this->image_lib->initialize($config); 
+                if($this->image_lib->resize())
+                {
+                $target = base_url('crop_image').'/'.$data['image_width'].'/'.$data['image_height'].'/'.$data['file_name'];
+                header("Location: ".$target);
+                }
             }
         }
-
-        $this->template->set('title', 'My website');
-        $this->template->load('layouts/main', 'profile_photo');
-
-
-    }
-    /**
-     * undocumented function
-     *
-     * @return void
-     **/
-    public function my_upload()
-    {
-        $config['upload_path'] = './uploads/';
-        $config['allowed_types'] = 'gif|jpg|png';
-        $config['max_size'] = '100';
-        $config['max_width'] = '1024';
-        $config['max_height'] = '768';
-
-        $this->load->library('upload', $config);
-
-        //$this->load->library('upload');
-      
-    
-            if ( !$this->upload->do_upload())
-            {
-            $error = array('error' => $this->upload->display_errors());
+        else
+        {
             $this->template->set('title', 'My website');
-            $this->template->load('layouts/main', 'profile_photo',$error);
-            }
-            else
-            {
-                $data = array('upload_data' => $this->upload->data());
-                print_r($data);
-                $this->load->view('upload_success', $data);
-            }
-
+            $this->template->load('layouts/main', 'profile_photo');
+        }
     }
-        
-    
-    /**
-     * undocumented function
-     *
-     * @return void
-     **/
-    public function cal_fun()
-    {
-        $this->load->library('upload');
-        $this->tests();
-    }
+   
+   /**
+    * undocumented function
+    *
+    * @return void
+    **/
+   public function crop_image()
+   {
+     if($this->input->post('x1'))
+     {
+        // print_r($this->input->post());
+        $this->load->library('image_lib');
+        $config['image_library'] = 'GD2';
+        $config['source_image'] = 'uploads/user_photos/temp/'.$this->uri->segment(4);
+        $config['maintain_ratio'] = FALSE;
+        $config['width']  = ($this->input->post('x2') - $this->input->post('x1')) ;
+        $config['height'] = ($this->input->post('y2') - $this->input->post('y1')) ;
+        $config['x_axis'] = $this->input->post('x1');
+        $config['y_axis'] = $this->input->post('y1');
 
+        // print_r($config);
+        // exit(0);
+        $this->image_lib->initialize($config); 
 
+        if ( ! $this->image_lib->crop())
+        {
+            echo $this->image_lib->display_errors();
+        }
+        else
+        {
+            $target = base_url();
+            header("Location: ".$target);
+        }
+
+     }  
+
+     if($this->uri->segment(4))
+     {
+        $data['file_name'] = $this->uri->segment(4);
+        $this->template->set('title', 'My website');
+        $this->template->load('layouts/img_crop','profile_photo_crop', $data);
+     }
+   }
   
 }
 
