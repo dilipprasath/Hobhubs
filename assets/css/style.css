@@ -12,7 +12,7 @@ input:focus{border-color:#c0a1db !important;outline:none !important}
 .normal_font{font-weight:normal !important}
 .margin_bt_20{margin-bottom:20px !important}
 .navbar-fixed-top{position:static !important}
-.login_box{width:335px;margin:25px auto;-webkit-box-shadow:0 0 19px rgba(0,0,0,0.65);-moz-box-shadow:0 0 19px rgba(0,0,0,0.65);box-shadow:0 0 19px rgba(0,0,0,0.65);padding:30px;background-color:#FFF}
+.login_box{width:335px;margin:25px auto;-webkit-box-shadow:0 0 19px rgba(0,0,0,0.65);-moz-box-shadow:0 0 19px rgba(0,0,0,0.65);box-shadow:0 0 19px rgba(0,0,0,0.65);-khtml-box-shadow:0 0 19px rgba(0,0,0,0.65);padding:30px;background-color:#FFF}
 .f_name,.l_name{width:40%}
 .hh_checkbox{width:auto !important;border:0;box-shadow:none !important}
 .hh_cb{margin-top:20px !important;font-size:14px}

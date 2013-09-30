@@ -37,6 +37,8 @@ class Home extends MY_Controller {
         $this->template->set('title', 'Change password');
         $this->template->load('layouts/main', 'user/fb_user_newpassword');
 	}
+	
+	
 	public function gplus_user_newpassword()
 	{
 		$this->template->set('title', 'Change password');

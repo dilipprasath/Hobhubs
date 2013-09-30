@@ -23,9 +23,7 @@
 </div>
 </div>
 </header>
-
- <?php echo  $contents ?>
-
+<?php echo  $contents ?>
 <script type="text/javascript">
 // select all desired input fields and attach tooltips to them
 $("#myform :input").tooltip({
@@ -46,14 +44,5 @@ input.setCustomValidity('The two passwords must match.');
 } else {
 input.setCustomValidity('');}}
 </script>
-<script type="text/javascript">
-$(function() {
-    $("[name=toggler]").click(function(){
-            $('.toHide').hide('slow');
-            $("#blk-"+$(this).val()).show('slow');
-    });
- });
-</script>
-
 </body>
 </html>
