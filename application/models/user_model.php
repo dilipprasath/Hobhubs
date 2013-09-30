@@ -142,7 +142,7 @@ class User_model  extends MY_Model {
             $this->email->initialize($config);
 		
 			$this->email->to($data['email']);
-			$this->email->from('info@domainindia.biz');
+			$this->email->from($this->config->item('site_email'));
 			$this->email->subject('Activate your account '.$data['firstname']);
             $this->email->message($email_body);
 
@@ -187,7 +187,7 @@ public function forgetpass()
             $this->email->initialize($config);
 		
 			$this->email->to($data['email']);
-			$this->email->from('info@domainindia.biz');
+			$this->email->from($this->config->item('site_email'));
 			$this->email->subject('Your login details for Hobhubs account ');
             $this->email->message($email_body);
 

@@ -12,7 +12,7 @@ class Home extends MY_Controller {
 
 
     public function index() {
-
+		 // check if user not select hobbies than redirect select_hobby
         $this->db->where('user_id',$this->session->userdata('user_id'));
         $query = $this->db->get('group_list');
 
@@ -26,16 +26,15 @@ class Home extends MY_Controller {
         {
            $target= base_url().'select_hobby'; 
             redirect($target,'refresh');
-        }
-
-        //todo:check if user not select hobbies than redirect select_hobby
+        }      
     	
     }
 
 	
 	public function fb_user_newpassword()
 	{
-		$this->template->set('title', 'Change password');
+		echo $this->input->get('name');
+        $this->template->set('title', 'Change password');
         $this->template->load('layouts/main', 'user/fb_user_newpassword');
 	}
 	public function gplus_user_newpassword()
