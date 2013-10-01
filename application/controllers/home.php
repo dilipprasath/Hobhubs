@@ -136,9 +136,7 @@ class Home extends MY_Controller {
    public function crop_image()
    {
      if($this->input->post())
-     {
-         //print_r($this->input->post());
-         
+     {  
         $this->load->library('image_lib');
         $config['image_library'] = 'GD2';
         $config['source_image'] = 'uploads/user_photos/temp/'.$this->uri->segment(4);
@@ -148,8 +146,6 @@ class Home extends MY_Controller {
         $config['x_axis'] = $this->input->post('x');
         $config['y_axis'] = $this->input->post('y');
 
-        // print_r($config);
-        // exit(0);
         $this->image_lib->initialize($config); 
 
         if ( ! $this->image_lib->crop())
@@ -158,6 +154,11 @@ class Home extends MY_Controller {
         }
         else
         {
+            //update image url
+        $data = array('user_img' =>  $this->uri->segment(4) );
+        $id=$this->session->userdata('user_id');
+        $this->db->where('user_id', $id);
+        $this->db->update('user', $data); 
             $target = base_url();
             header("Location: ".$target);
         }
@@ -167,6 +168,7 @@ class Home extends MY_Controller {
      if($this->uri->segment(4))
      {
         $data['file_name'] = $this->uri->segment(4);
+        
         $this->template->set('title', 'My website');
         $this->template->load('layouts/img_crop','profile_photo_crop', $data);
      }
