@@ -15,6 +15,7 @@
 <script type="text/javascript" src="<?php echo asset_url('js/jquery.Jcrop.js') ?>"
 ></script>
   <script type="text/javascript" src="<?php echo asset_url('js/cropsetup.js') ?>"></script>
+ 
 </head>
 <body>
 <header>

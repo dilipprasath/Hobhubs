@@ -12,7 +12,8 @@ class Home extends MY_Controller {
 
 
     public function index() {
-		 // check if user not select hobbies than redirect select_hobby
+		 // todo: move into model file
+         // check if user not select hobbies than redirect select_hobby
         $this->db->where('user_id',$this->session->userdata('user_id'));
         $query = $this->db->get('group_list');
 
