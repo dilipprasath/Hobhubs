@@ -129,17 +129,18 @@ class Home extends MY_Controller {
     **/
    public function crop_image()
    {
-     if($this->input->post('x1'))
+     if($this->input->post())
      {
-        // print_r($this->input->post());
+         //print_r($this->input->post());
+         
         $this->load->library('image_lib');
         $config['image_library'] = 'GD2';
         $config['source_image'] = 'uploads/user_photos/temp/'.$this->uri->segment(4);
         $config['maintain_ratio'] = FALSE;
-        $config['width']  = ($this->input->post('x2') - $this->input->post('x1')) ;
-        $config['height'] = ($this->input->post('y2') - $this->input->post('y1')) ;
-        $config['x_axis'] = $this->input->post('x1');
-        $config['y_axis'] = $this->input->post('y1');
+        $config['width']  = $this->input->post('w');
+        $config['height'] = $this->input->post('h');
+        $config['x_axis'] = $this->input->post('x');
+        $config['y_axis'] = $this->input->post('y');
 
         // print_r($config);
         // exit(0);

@@ -11,19 +11,10 @@
 <link href="<?php echo asset_url('css/image_crop/imgareaselect-default.css') ?>" rel="stylesheet" media="screen">	
 <script src="<?php echo asset_url('js/jQuery v1.10.2.js') ?>"></script>
 <script src="<?php echo asset_url('js/bootstrap.min.js') ?>"></script>
-<script src="<?php echo asset_url('js/jquery.imgareaselect.pack.js') ?>"></script>
-<script>
-$(document).ready(function () {
-    $('#user_img').imgAreaSelect({
-        onSelectEnd: function (img, selection) {
-            $('input[name="x1"]').val(selection.x1);
-            $('input[name="y1"]').val(selection.y1);
-            $('input[name="x2"]').val(selection.x2);
-            $('input[name="y2"]').val(selection.y2);            
-        }
-    });
-});
-</script>
+
+<script type="text/javascript" src="<?php echo asset_url('js/jquery.Jcrop.js') ?>"
+></script>
+  <script type="text/javascript" src="<?php echo asset_url('js/cropsetup.js') ?>"></script>
 </head>
 <body>
 <header>
