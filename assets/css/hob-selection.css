@@ -30,7 +30,7 @@
 .hobby_name{font-family:Tahoma, Geneva, sans-serif !important;}
 .profile_photo_space{ width:205px;height:225px; background-color:#dbeef4; margin:auto; padding:5px;border:#96cfde solid 2px;  }
 .profile_photo_space_inner{ border:#96cfde dashed 2px; height:220px;}
-.profile_photo_up{ width:255px; margin: 10px auto;}
+.profile_photo_up{ width:260px; margin: 10px auto;}
 .profile_photo_input{ width:190px !important;}
 .photo_crop{ background-color:#dbeef4; width:420px; margin:auto; height:370px; border:#afdae6 solid 2px;}
 .photo_crop_link{ margin: 10px auto;}
