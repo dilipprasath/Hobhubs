@@ -44,6 +44,12 @@ class Home extends MY_Controller {
 		$this->template->set('title', 'Change password');
         $this->template->load('layouts/main', 'user/gplus_user_newpassword');
 	}
+	
+	public function profile_page()
+	{
+		$this->template->set('title', 'Change password');
+        $this->template->load('layouts/main', 'profile_page');
+	}
 
     /**
      * undocumented function
