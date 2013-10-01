@@ -18,9 +18,21 @@ class Home extends MY_Controller {
 
         if($query->num_rows() > 0)
         {
-            echo "Create profile page for user";
-            echo '<a href="' . base_url(). "profile_photo" .'"> profile photo </a><br/>' ;
-            echo '<a href="' . base_url(). "select_hobby" .'"> select_hobby </a>' ;
+            
+            $this->db->where('user_id',$this->session->userdata('user_id'));
+            $query = $this->db->get('user');
+
+             if($query->num_rows() > 0)
+            {
+             foreach ($query->result() as $row)
+             {
+                 $data['img_url']="";
+                 $data['img_url']= $row->user_img;
+             }
+            $this->template->set('title', 'Change password');
+            $this->template->load('layouts/main', 'profile_page',$data);
+             }
+          
         }
         else
         {
@@ -30,7 +42,7 @@ class Home extends MY_Controller {
     	
     }
 
-	
+	//vimal  pages
 	public function fb_user_newpassword()
 	{
 		echo $this->input->get('name');
