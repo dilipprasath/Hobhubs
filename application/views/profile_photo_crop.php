@@ -2,7 +2,10 @@
 <div id="img_right2" class="disabled"><a href="#">Done</a></div>
 <div class="hob_select_box container">
   <h4>Profile Photo</h4>
-  <div class="jc-demo-box"> <img src="<?php echo base_url('uploads/user_photos/temp').'/'.$file_name; ?>" id="target" alt="[Jcrop Example]" />
+  <div class="jc-demo-box">
+  <div class="crop_img_sel"> <img src="<?php echo base_url('uploads/user_photos/temp').'/'.$file_name; ?>" id="target" alt="[Jcrop Example]"  />
+   </div>
+   
     <div id="preview-pane">
       <div class="preview-container"> <img src="<?php echo base_url('uploads/user_photos/temp').'/'.$file_name; ?>" class="jcrop-preview" alt="Preview" /> </div>
     </div>

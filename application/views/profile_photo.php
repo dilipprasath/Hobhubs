@@ -3,6 +3,7 @@
 <div class="hob_select_box container">
 <h4>Profile Photo</h4>
 <!--Hobby box1 start-->
+<br><br><br>
 <div class="row">
 <a href="#"  onclick="$('input[id=lefile]').click();">
 <div class="profile_photo_space row-fluid">
@@ -13,8 +14,6 @@
 <form method="post" enctype="multipart/form-data" action="" class="form-search">
 <input type="hidden" name="checkval" value="yes">
 <div class="profile_photo_up"></div>
-
-
 <input id="lefile" type="file" style="display:none" name="userfile" onchange="this.form.submit();">
 <input id="photoCover" class="input-medium search-query " type="text" onFocus="$('input[id=lefile]').click();">&nbsp;
 <a class="btn btn-success" onclick="$('input[id=lefile]').click();">Browse</a>

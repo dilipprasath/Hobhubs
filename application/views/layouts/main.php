@@ -20,6 +20,11 @@
 <img src="<?php echo asset_url('img/hobhubs_logo.png') ?>">
 </a>
 </div>
+<div class="span8"><br>
+<a href="<?php echo base_url('user/logout') ?>">
+<input type="button" class="btn btn-small fright" value="Logout">
+</a>
+</div>
 </div>
 </div>
 </header>

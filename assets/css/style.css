@@ -45,6 +45,8 @@ a#login_pop:hover,a#join_pop:hover{border-color:#eee}
 .account_recv2{border:#CCC 1px solid;padding:10px 10px;height:57px}
 .user_image{float:left;margin-right:20px}
 .user_email{float:left;line-height:30px}
+.fleft{ float:left}
+.fright{ float:right}
 /* Account Recovery Page CSS End */
 /* Large desktop */
 @media (min-width: 1200px) 
@@ -91,7 +93,9 @@ a#login_pop:hover,a#join_pop:hover{border-color:#eee}
 	height:350px !important;
 }
 }
-/*Profile Photo Crop CSS*/
+
+
+/************Profile Photo Crop CSS Start*****************/
 
 /* jcrop styles */
 .jc-demo-box {
@@ -128,15 +132,7 @@ a#login_pop:hover,a#join_pop:hover{border-color:#eee}
   overflow: hidden;
 }
 /* jquery.Jcrop.css v0.9.12 - MIT License */
-/*
-  The outer-most container in a typical Jcrop instance
-  If you are having difficulty with formatting related to styles
-  on a parent element, place any fixes here or in a like selector
 
-  You can also style this element if you want to add a border, etc
-  A better method for styling can be seen below with .jcrop-light
-  (Add a class to the holder and style elements for that extended class)
-*/
 .jcrop-holder {
   direction: ltr;
   text-align: left;
@@ -292,3 +288,6 @@ a#login_pop:hover,a#join_pop:hover{border-color:#eee}
 img.jcrop-preview {
   max-width: none;
 }
+
+/************Profile Photo Crop CSS End*****************/
+

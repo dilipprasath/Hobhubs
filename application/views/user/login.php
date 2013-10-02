@@ -198,7 +198,7 @@ Female
 <?php  echo validation_errors() ?>
 <form method="post" class="bs-docs-example" style="padding-bottom: 15px;">
 <div class="docs_input_box row-fluid">
-<input type="text" name="username" class="input-block-level f_name padding2 span12" placeholder="Email" required >
+<input type="text" name="username" class="input-block-level f_name padding2 span12" placeholder="Email / User Name" required >
 <input  type="password"  name="password"class="input-block-level l_name padding2 span12" placeholder="Password" required >
 </div>
 <div><a href="<?php echo base_url('user/account_recovery') ?>">Can't access your account?</a><br></div>
