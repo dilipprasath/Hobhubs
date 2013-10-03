@@ -4,7 +4,9 @@
 <div class="hob_select_box container">
 <h4>Select your Hobby(s)</h4>
 <?php if (isset($hobbynone)): ?>
-  <p class="text-error">You must select at least one Hobby .</p>
+<div class="alert alert-error">
+<p class="text-error">You must select at least one Hobby</p>
+</div>
 <?php endif ?>
 <!--Hobby box1 start-->
 <form method="post" action="" >
@@ -27,8 +29,10 @@
 
  <script type="text/javascript">
 
-    $("select.image-picker.limit_callback").imagepicker({
-      limit_reached:  function(){alert('you can select only three  items !')},
+    $("select.image-picker.limit_callback")
+	.imagepicker({ limit_reached:  
+	  function()
+	  {alert('you can select only three  items !')},
 	  //hide_select:  false,
 	  show_label:   true,
     });

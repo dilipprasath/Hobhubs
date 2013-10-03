@@ -24,8 +24,8 @@ class User extends CI_Controller {
 
 			if($this->user_model->login()=== FALSE)
 			{
-				$this->template->set('title', 'My website');
-       			$this->template->load('layouts/main', 'user/login');
+				$this->template->set('title', 'Login');
+       			$this->template->load('layouts/main_login', 'user/login');
 			}
 			else
 			{
@@ -39,15 +39,15 @@ class User extends CI_Controller {
 					}
 					else
 					{
-						$this->template->set('title', 'My website');
-       					$this->template->load('layouts/main', 'user/login');
+						$this->template->set('title', 'Login');
+       					$this->template->load('layouts/main_login', 'user/login');
 					}
 			}					
 		}
 		else
 		{
-		$this->template->set('title', 'My website');
-       	$this->template->load('layouts/main', 'user/login');
+		$this->template->set('title', 'Login');
+       	$this->template->load('layouts/main_login', 'user/login');
     	}
 	}
 

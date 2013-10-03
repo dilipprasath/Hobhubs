@@ -47,20 +47,20 @@ class Home extends MY_Controller {
 	public function fb_user_newpassword()
 	{
 		echo $this->input->get('name');
-        $this->template->set('title', 'Change password');
+        $this->template->set('title', 'Facebook password');
         $this->template->load('layouts/main', 'user/fb_user_newpassword');
 	}
 	
 	
 	public function gplus_user_newpassword()
 	{
-		$this->template->set('title', 'Change password');
+		$this->template->set('title', 'Google+ password');
         $this->template->load('layouts/main', 'user/gplus_user_newpassword');
 	}
 	
 	public function profile_page()
 	{
-		$this->template->set('title', 'Change password');
+		$this->template->set('title', 'Profile Page');
         $this->template->load('layouts/main', 'profile_page');
 	}
 
@@ -87,7 +87,7 @@ class Home extends MY_Controller {
                 $data['hobbynone']=TRUE;
             }
         }
-        $this->template->set('title', 'My website');
+        $this->template->set('title', 'Hobbys Selection');
         $this->template->load('layouts/main', 'select_hobby',$data);
 
     }
@@ -114,7 +114,7 @@ class Home extends MY_Controller {
             {
                 $error = array('error' => $this->upload->display_errors());
                 print_r($error);
-                $this->template->set('title', 'My website');
+                $this->template->set('title', 'Upload Profile Photo');
                 $this->template->load('layouts/main', 'profile_photo',$error);
             }
             else
@@ -136,7 +136,7 @@ class Home extends MY_Controller {
         }
         else
         {
-            $this->template->set('title', 'My website');
+            $this->template->set('title', 'Upload Profile Photo');
             $this->template->load('layouts/main', 'profile_photo');
         }
     }
@@ -182,7 +182,7 @@ class Home extends MY_Controller {
      {
         $data['file_name'] = $this->uri->segment(4);
         
-        $this->template->set('title', 'My website');
+        $this->template->set('title', 'Crop Profile Photo');
         $this->template->load('layouts/img_crop','profile_photo_crop', $data);
      }
    }

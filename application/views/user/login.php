@@ -213,7 +213,7 @@ Female
 </form>
 <h4 class="lp_color">Login / Sign Up</h4>
 <div class="row-fluid map_img">
-<img src="<?php echo asset_url('img/fb-tw-logo.jpg') ?>" width="250" height="37" border="0" usemap="#Map" class="fb_tw_logo">
+<img src="<?php echo asset_url('img/fb-tw-logo.jpg') ?>"  border="0" usemap="#Map" class="fb_tw_logo">
 <map name="Map">
 <area shape="rect" coords="1,3,128,40" href="<?php echo base_url('user/facebook_request'); ?>"  alt="Facebook Sign Up">
 <area shape="rect" coords="130,2,253,38" href="http://www.twitter.com" target="_blank" alt="Twitter Sign Up">

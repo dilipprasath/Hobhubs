@@ -127,8 +127,8 @@ a#login_pop:hover,a#join_pop:hover{border-color:#eee}
    area based on the size of the thumbnail preview,
    specified here */
 #preview-pane .preview-container {
-  width: 150px;
-  height: 150px;
+  width: 175px;
+  height: 215px;
   overflow: hidden;
 }
 /* jquery.Jcrop.css v0.9.12 - MIT License */
