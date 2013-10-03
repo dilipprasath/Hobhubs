@@ -204,7 +204,7 @@ Female
 <div><a href="<?php echo base_url('user/account_recovery') ?>">Can't access your account?</a><br></div>
 <div class="hh_cbbox">
 <label class="checkbox">
-<input type="checkbox"> Keep Me Logged In
+<input type="checkbox" name="PersistentCookie" value="yes" checked="checked"> Keep Me Logged In
 </label>
 </div>
 <div class="row-fluid">

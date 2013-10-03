@@ -52,7 +52,23 @@ class User_model  extends MY_Model {
 
 	}
 
+	public function set_cookie()
+	{
+	   $this->db->where('user_id =', $this->session->userdata('user_id')); 
+	   $data['remember_me_token']=md5(base64_encode($this->session->userdata('firstname').rand(10,100)));
+		$this->db->update('user', $data);
+		
 
+	     $cookie = array(
+	        'name'   => 'identity',
+	        'value'  =>  $data['remember_me_token'],
+	        'expire' => 86500,
+	        'domain' => '',
+	        'path'   => '/',
+	        'prefix' => ''
+    	);
+    	$this->input->set_cookie($cookie); 
+   	}
 
 	public function auth()
 	{

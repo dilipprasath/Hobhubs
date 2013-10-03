@@ -9,6 +9,7 @@ class User extends CI_Controller {
 		$this->load->library('form_validation');
 		$this->load->library('email');
 		$this->load->model('user_model');
+		$this->load->helper('cookie');
 	}
 
 	
@@ -34,6 +35,11 @@ class User extends CI_Controller {
 					//authorises the user and create session in model
 					if($this->user_model->auth_user($username,$password))
 					{
+						if($this->input->post('PersistentCookie')==="yes")
+						{
+						$this->user_model->set_cookie();
+						}
+						
 						$target = base_url();
 						header("Location: ". $target);
 					}
@@ -97,7 +103,8 @@ class User extends CI_Controller {
 	//logout the user and redirect to home
 	public function logout()
 	{      
-		$this->session->unset_userdata('userloggedin');		
+		$this->session->unset_userdata('userloggedin');	
+		delete_cookie("identity");	
 		$this->session->sess_destroy();	
 		$target= base_url();	
 		redirect($target,'refresh');
