@@ -8,7 +8,7 @@ class User extends CI_Controller {
 		$this->load->library('session');
 		$this->load->library('form_validation');
 		$this->load->library('email');
-		$this->load->model('user_model');
+		//$this->load->model('user_model');
 		$this->load->helper('cookie');
 	}
 
@@ -17,7 +17,93 @@ class User extends CI_Controller {
 	{
 			echo"need to work";	
 	}
+	/**
+	 * undocumented function
+	 *
+	 * @return void
+	 **/
+	public function goog()
+	{
+		//include google api files
+	require_once APPPATH.'third_party/google/Google_Client.php';
+	require_once APPPATH.'third_party/google/contrib/Google_Oauth2Service.php';
+		########## Google Settings.. Client ID, Client Secret #############
+	$google_client_id 		= '41025434137.apps.googleusercontent.com';
+	$google_client_secret 	= 'tRh3YyFL19LL83AlepsqiqJL';
+	$google_redirect_url 	= 'http://hobup.com/user/goog/';
+	$google_developer_key 	= 'AIzaSyC2CMbVotuXMecXTwxvyt5A5osFbY8d5xc';
 
+	$gClient = new Google_Client();
+	$gClient->setApplicationName('Login to hobup.com');
+	$gClient->setClientId($google_client_id);
+	$gClient->setClientSecret($google_client_secret);
+	$gClient->setRedirectUri($google_redirect_url);
+	$gClient->setDeveloperKey($google_developer_key);
+
+	$google_oauthV2 = new Google_Oauth2Service($gClient);
+echo"code";
+		//Redirect user to google authentication page for code, if code is empty.
+		//Code is required to aquire Access Token from google
+		//Once we have access token, assign token to session variable
+		//and we can redirect user back to page and login.
+		if (isset($_GET['code'])) 
+		{ 
+			$gClient->authenticate($_GET['code']);
+			$gClient->getAccessToken();
+			//$_SESSION['views']=1;
+			$userloggedin = array(
+				'views'=>TRUE,
+				);
+
+			$this->session->set_userdata($userloggedin);
+			
+			if ($this->session->userdata('views'))) 
+			{
+				echo"yes done";
+				exit(0);
+			}
+			else
+			{
+				echo"why not session";
+			}
+			exit(0);
+			$_SESSION['token'] = $gClient->getAccessToken();
+			header('Location: ' . filter_var($google_redirect_url, FILTER_SANITIZE_URL));
+			return;
+		}
+		else
+		{
+
+			echo"whycode";
+		}
+		
+
+		if (isset($_SESSION['token'])) 
+		{ 
+			$gClient->setAccessToken($_SESSION['token']);
+		}
+		
+		if ($gClient->getAccessToken()) 
+		{
+			  //Get user details if user is logged in
+			 echo $user 				= $google_oauthV2->userinfo->get();
+			echo   $user_id 				= $user['id'];
+			  $user_name 			= filter_var($user['name'], FILTER_SANITIZE_SPECIAL_CHARS);
+			  $email 				= filter_var($user['email'], FILTER_SANITIZE_EMAIL);
+			  $profile_url 			= filter_var($user['link'], FILTER_VALIDATE_URL);
+			  $profile_image_url 	= filter_var($user['picture'], FILTER_VALIDATE_URL);
+			  $personMarkup 		= "$email<div><img src='$profile_image_url?sz=50'></div>";
+			  $_SESSION['token'] 	= $gClient->getAccessToken();
+			  exit(0);
+		}
+		else 
+		{
+			//get google login url			
+			$authUrl = $gClient->createAuthUrl();
+			header('Location: ' . $authUrl);
+		}
+			
+	}
 	// user login form
 	function login()
 	{

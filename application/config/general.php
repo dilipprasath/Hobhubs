@@ -13,7 +13,7 @@ $config['site_name'] = 'Hobup';
 */
 $config['version'] = '1.0.0';
 
-$config['site_email'] = 'info@hobhubs.com';
+$config['site_email'] = 'no-reply@hobhup.com';
 
 /* End of file general.php */
 /* Location: ./application/config/general.php */

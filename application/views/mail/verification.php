@@ -18,12 +18,12 @@
                                     Please click the button below to use Hobhubs services.<br>
                                     <br> 
                                     <br>
-                                    <p style="text-align:center;margin:0;padding:0"> <b style="border:2px solid #4070a6;background-color:#3c79b7;padding:5px 17px 7px 17px"><a href="http:/hobhubs.com/test/user/key/{salt} " style="font-weight:bold;text-decoration:none;font-size:12px;color:#ffffff" target="_blank">Account Verification</a></b></p>
+                                    <p style="text-align:center;margin:0;padding:0"> <b style="border:2px solid #4070a6;background-color:#3c79b7;padding:5px 17px 7px 17px"><a href="http:/hobup.com/user/key/{salt} " style="font-weight:bold;text-decoration:none;font-size:12px;color:#ffffff" target="_blank">Account Verification</a></b></p>
                                     <br>
                                     <br> 
                                     <p style="padding:0;margin:0 0 6px 0;font-size:12px;font-family:Arial,Helvetica,sans-serif;color:#222222;line-height:18px"><b>If the link above doesn't work, copy and paste the address below into a new browser window.</b></p>
                                     <br>
-                                    <p style="padding:7px 10px 8px 10px;margin:0;display:block;background-color:#eeeeee;color:#245498;font-weight:normal;text-decoration:underline;font-size:12px;font-family:Arial,Helvetica,sans-serif;line-height:18px"><b style="color:#245498;text-decoration:none;font-weight:normal"><a href="http:/hobhubs.com/test/user/key/{salt} " target="_blank">http:/hobhubs.com/user/key/{salt} </a></b></p>
+                                    <p style="padding:7px 10px 8px 10px;margin:0;display:block;background-color:#eeeeee;color:#245498;font-weight:normal;text-decoration:underline;font-size:12px;font-family:Arial,Helvetica,sans-serif;line-height:18px"><b style="color:#245498;text-decoration:none;font-weight:normal"><a href="http:/hobup.com/user/key/{salt} " target="_blank">http:/hobup.com/user/key/{salt} </a></b></p>
                                     <br>
                                     <br>
                                     <b>Don't have a Hobhubs account?</b>
@@ -31,7 +31,7 @@
                                     Another user may have entered the wrong email address by mistake. If you are not the intended recipient of this email, please disregard it.<br>If you want to use Hobhubs services, you must confirm. <br> <br> 
                                     <b>Need help?</b>
                                     <br>
-                                    This is a "no-reply" email address so you'll be unable to reply to it. For member registration and logon queries, please go to this website using the link: <b style="color:#245498;text-decoration:none;font-weight:normal"><a href="http://help.hobhubs.com" target="_blank">http://help.hobhubs.<wbr>com</a></b><br> <br> 
+                                    This is a "no-reply" email address so you'll be unable to reply to it. For member registration and logon queries, please go to this website using the link: <b style="color:#245498;text-decoration:none;font-weight:normal"><a href="http://help.hobup.com" target="_blank">http://help.hobhubs.<wbr>com</a></b><br> <br> 
                                     <p style="padding:0;margin:0;font-size:12px;font-family:Arial,Helvetica,sans-serif;color:#222222;line-height:18px"> Kind regards,<br>Hobhubs account team </p>
                                     <br>
                                     <br> 
