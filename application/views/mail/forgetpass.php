@@ -14,16 +14,16 @@
                               <tr>
                                  <td style="border-left:1px solid #bac1c8;border-right:1px solid #bac1c8;padding:0 0 23px 0;font-size:12px;line-height:18px;font-family:Arial;color:#222222;padding:0px 24px 18px 24px">
                                     <p style="font-size:16px;line-height:18px;color:#222222;border-bottom:1px solid #373d44;width:100%;margin:0;padding:0 0 10px 0;font-weight:bold">Reset your password for Hobhubs Services.</p>
-                                    <br> Dear , {firstname}   {lastname} <br> <br>
+                                    <br> Dear , {User_firstname}   {User_lastname} <br> <br>
                           Recently a request was submitted to reset your password for our client area. If you did not request this, please ignore this email. It will expire and become useless in 2 hours time.<br>
                                     <br> 
                                     <br>
-                                    <p style="text-align:center;margin:0;padding:0"> <b style="border:2px solid #4070a6;background-color:#3c79b7;padding:5px 17px 7px 17px"><a href="http:/hobup.com/user/pwreset/{salt} " style="font-weight:bold;text-decoration:none;font-size:12px;color:#ffffff" target="_blank">Reset Your Password</a></b></p>
+                                    <p style="text-align:center;margin:0;padding:0"> <b style="border:2px solid #4070a6;background-color:#3c79b7;padding:5px 17px 7px 17px"><a href="http:/hobup.com/user/pwreset/{User_salt} " style="font-weight:bold;text-decoration:none;font-size:12px;color:#ffffff" target="_blank">Reset Your Password</a></b></p>
                                     <br>
                                     <br> 
                                     <p style="padding:0;margin:0 0 6px 0;font-size:12px;font-family:Arial,Helvetica,sans-serif;color:#222222;line-height:18px"><b>To reset your password, please visit the url below.</b></p>
                                    <br>
-                                    <p style="padding:7px 10px 8px 10px;margin:0;display:block;background-color:#eeeeee;color:#245498;font-weight:normal;text-decoration:underline;font-size:12px;font-family:Arial,Helvetica,sans-serif;line-height:18px"><b style="color:#245498;text-decoration:none;font-weight:normal"><a href="http:/hobup.com/user/pwreset/{salt} " target="_blank">http:/hobup.com/user/pwreset/{salt} </a></b></p>
+                                    <p style="padding:7px 10px 8px 10px;margin:0;display:block;background-color:#eeeeee;color:#245498;font-weight:normal;text-decoration:underline;font-size:12px;font-family:Arial,Helvetica,sans-serif;line-height:18px"><b style="color:#245498;text-decoration:none;font-weight:normal"><a href="http:/hobup.com/user/pwreset/{User_salt} " target="_blank">http:/hobup.com/user/pwreset/{User_salt} </a></b></p>
                                     <p><br>
                                     <br>
                                     <b>When you visit the link above, your password will be reset, and the new password will be emailed to you.</b><br> 

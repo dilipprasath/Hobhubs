@@ -12,36 +12,48 @@ class Home extends MY_Controller {
 
 
     public function index() {
-		 // todo: move into model file
-         // check if user not select hobbies than redirect select_hobby
-        $this->db->where('user_id',$this->session->userdata('user_id'));
-        $query = $this->db->get('group_list');
+
+      if($this->uri->segment(2))
+      {
+
+        echo $this->uri->segment(2);
+      }
+      else
+      {
+  		    // todo: move into model file
+           // check if user not select hobbies than redirect select_hobby
+        $this->db->where('User_id',$this->session->userdata('user_id'));
+        $query = $this->db->get('User_Hob');
 
         if($query->num_rows() > 0)
         {
-            
-            $this->db->where('user_id',$this->session->userdata('user_id'));
-            $query = $this->db->get('user');
+              
+              $this->db->where('User_id',$this->session->userdata('user_id'));
+              $query = $this->db->get('User');
 
-             if($query->num_rows() > 0)
-            {
-             foreach ($query->result() as $row)
-             {
-                 $data['img_url']="";
-                 $data['img_url']= $row->user_img;
-             }
-            $this->template->set('title', 'Change password');
-            $this->template->load('layouts/main', 'profile_page',$data);
-             }
-          
+               if($query->num_rows() > 0)
+              {
+               foreach ($query->result() as $row)
+               {
+                   $data['img_url']="";
+                   $data['img_url']= $row->User_img;
+               }
+              $this->template->set('title', 'Change password');
+              $this->template->load('layouts/home', 'profile_page',$data);
+               }
+            
         }
         else
         {
-           $target= base_url().'select_hobby'; 
-            redirect($target,'refresh');
-        }      
+             $target= base_url().'select_hobby'; 
+              redirect($target,'refresh');
+        } 
+
+      }     
     	
     }
+
+
 
 	//vimal  pages
 	public function fb_user_newpassword()
@@ -113,7 +125,6 @@ class Home extends MY_Controller {
             if (!$this->upload->do_upload())
             {
                 $error = array('error' => $this->upload->display_errors());
-                print_r($error);
                 $this->template->set('title', 'Upload Profile Photo');
                 $this->template->load('layouts/main', 'profile_photo',$error);
             }
@@ -168,10 +179,10 @@ class Home extends MY_Controller {
         else
         {
             //update image url
-        $data = array('user_img' =>  $this->uri->segment(4) );
+        $data = array('User_img' =>  $this->uri->segment(4) );
         $id=$this->session->userdata('user_id');
-        $this->db->where('user_id', $id);
-        $this->db->update('user', $data); 
+        $this->db->where('User_id', $id);
+        $this->db->update('User', $data); 
             $target = base_url();
             header("Location: ".$target);
         }

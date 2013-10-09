@@ -14,16 +14,16 @@
                               <tr>
                                  <td style="border-left:1px solid #bac1c8;border-right:1px solid #bac1c8;padding:0 0 23px 0;font-size:12px;line-height:18px;font-family:Arial;color:#222222;padding:0px 24px 18px 24px">
                                     <p style="font-size:16px;line-height:18px;color:#222222;border-bottom:1px solid #373d44;width:100%;margin:0;padding:0 0 10px 0;font-weight:bold">Welcome to Hobhubs Services.</p>
-                                    <br> Dear , {firstname}   {lastname} <br> <br>
+                                    <br> Dear , {User_firstname}   {User_lastname} <br> <br>
                                     Please click the button below to use Hobhubs services.<br>
                                     <br> 
                                     <br>
-                                    <p style="text-align:center;margin:0;padding:0"> <b style="border:2px solid #4070a6;background-color:#3c79b7;padding:5px 17px 7px 17px"><a href="http:/hobup.com/user/key/{salt} " style="font-weight:bold;text-decoration:none;font-size:12px;color:#ffffff" target="_blank">Account Verification</a></b></p>
+                                    <p style="text-align:center;margin:0;padding:0"> <b style="border:2px solid #4070a6;background-color:#3c79b7;padding:5px 17px 7px 17px"><a href="http:/hobup.com/user/key/{User_salt} " style="font-weight:bold;text-decoration:none;font-size:12px;color:#ffffff" target="_blank">Account Verification</a></b></p>
                                     <br>
                                     <br> 
                                     <p style="padding:0;margin:0 0 6px 0;font-size:12px;font-family:Arial,Helvetica,sans-serif;color:#222222;line-height:18px"><b>If the link above doesn't work, copy and paste the address below into a new browser window.</b></p>
                                     <br>
-                                    <p style="padding:7px 10px 8px 10px;margin:0;display:block;background-color:#eeeeee;color:#245498;font-weight:normal;text-decoration:underline;font-size:12px;font-family:Arial,Helvetica,sans-serif;line-height:18px"><b style="color:#245498;text-decoration:none;font-weight:normal"><a href="http:/hobup.com/user/key/{salt} " target="_blank">http:/hobup.com/user/key/{salt} </a></b></p>
+                                    <p style="padding:7px 10px 8px 10px;margin:0;display:block;background-color:#eeeeee;color:#245498;font-weight:normal;text-decoration:underline;font-size:12px;font-family:Arial,Helvetica,sans-serif;line-height:18px"><b style="color:#245498;text-decoration:none;font-weight:normal"><a href="http:/hobup.com/user/key/{User_salt} " target="_blank">http:/hobup.com/user/key/{User_salt} </a></b></p>
                                     <br>
                                     <br>
                                     <b>Don't have a Hobhubs account?</b>

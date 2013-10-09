@@ -15,7 +15,7 @@ class Home_model extends MY_Model {
 		$userid=$this->session->userdata('user_id');
 		foreach ($list as  $hobby) {
 			
-    		$this->db->query("INSERT IGNORE INTO  group_list (user_id ,group_id )VALUES ( $userid, $hobby)");
+    		$this->db->query("INSERT IGNORE INTO  User_Hob (User_id ,Hob_id )VALUES ( $userid, $hobby)");
 
 		}
 

@@ -181,10 +181,10 @@ pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])^\D.{6,}" />
 </div>
 <div class="row-fluid form-inline">
 <label class="radio">
-<input type="radio" name="gender" class="input_radio" value="male" required>Male &nbsp;
+<input type="radio" name="gender" class="input_radio" value="1" required>Male &nbsp;
 </label>
 <label class="radio">
-<input type="radio" name="gender" class="input_radio" value="female" required>
+<input type="radio" name="gender" class="input_radio" value="2" required>
 Female
 </label>
 </div>

@@ -10,15 +10,15 @@ abstract class MY_Controller extends CI_Controller {
 			if (!$this->session->userdata('userloggedin'))
 			{	
 			$rememberme=$this->input->cookie('identity');
-			$this->db->where('remember_me_token =',$rememberme);
-			$res = $this->db->get('user');
+			$this->db->where('User_signup_token =',$rememberme);
+			$res = $this->db->get('User');
 			if($res->num_rows()>0)
 				{
 				$row = $res->row();
-				$userid=$row->user_id;
-				$firstname = $row->firstname;
-				$lastname = $row->lastname;
-				$email = $row->email;	
+				$userid=$row->User_id;
+				$firstname = $row->User_firstname;
+				$lastname = $row->User_lastname;
+				$email = $row->User_email;	
 				$userloggedin = array(
 				'userloggedin'=>TRUE,
 				'user_id'     => $userid,

@@ -180,10 +180,10 @@ pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])^\D.{6,}" />
 </div>
 <div class="row-fluid">
 <label class="radio form-inline">
-<input type="radio" name="gender" class="input_radio" value="male" required>Male
+<input type="radio" name="gender" class="input_radio" value="1" required>Male
 </label>&nbsp;
 <label class="radio form-inline">
-<input type="radio" name="gender" class="input_radio" value="female" required>
+<input type="radio" name="gender" class="input_radio" value="2" required>
 Female
 </label>
 </div>
@@ -216,7 +216,7 @@ Female
 <img src="<?php echo asset_url('img/fb-tw-logo.jpg') ?>"  border="0" usemap="#Map" class="fb_tw_logo">
 <map name="Map">
 <area shape="rect" coords="1,3,128,40" href="<?php echo base_url('user/facebook_request'); ?>"  alt="Facebook Sign Up">
-<area shape="rect" coords="130,2,253,38" href="http://www.twitter.com" target="_blank" alt="Twitter Sign Up">
+<area shape="rect" coords="130,2,253,38" href="<?php echo base_url('user/google_request'); ?>"  alt="Google+ Sign Up">
 </map><br><br>
 <a href="#login_form"><input type="submit" value="Sign Up with Email"class="hh_button span8" /></a>   
 </div>
