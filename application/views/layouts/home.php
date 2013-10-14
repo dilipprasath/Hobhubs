@@ -26,7 +26,7 @@
       </div>
       <div class="span2"></div>
       <div class="span2 pos_rel">
-        <div class="pos_rel profile_photo"><img alt="" style=" width:175px; height:215px" src="<?php echo base_url('uploads/user_photos/temp').'/'.$img_url ?>"></div>
+        <div class="pos_rel profile_photo"><img alt="" style=" width:150px; height:180px" src=""></div>
       </div>
       <div class="span2"></div>
       <div class="span2 row-fluid marcutl">
@@ -59,7 +59,7 @@
           <div class="span12 abtme_bot">
             <ul class="unstyled abtme_list">
               <li><a href="#"><img src="http://hobhubs.com/test/assets/img/photos-icon.png">Photos</a></li>
-              <li><a href="#"><img src="http://hobhubs.com/test/assets/img/post-icon.png">Posts</a></li>
+              <li><a href="#"><img src="http://hobhubs.com/test/assets/img/post-icon.png">Text</a></li>
               <li><a href="#"><img src="http://hobhubs.com/test/assets/img/h-icon.png">Hobby(s)</a></li>
               <li><a href="#"><img src="http://hobhubs.com/test/assets/img/friends-icon.png">Friends</a></li>
               <li><a href="#"><img src="http://hobhubs.com/test/assets/img/apps-icon.png">Apps</a></li>
@@ -116,5 +116,12 @@ if (!('placeholder' in test)) {
     });
 }
 </script>
+<script type="text/javascript">
+    $(function () {
+        $("[rel='tooltip']").tooltip();
+	 });
+</script> 
+<script src="<?php echo asset_url('js/classie.js') ?>"></script> 
+<script src="<?php echo asset_url('js/modalEffects.js') ?>"></script>
 </body>
 </html>

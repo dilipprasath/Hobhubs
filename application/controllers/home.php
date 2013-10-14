@@ -60,7 +60,7 @@ class Home extends MY_Controller {
 	{
 		echo $this->input->get('name');
         $this->template->set('title', 'Facebook password');
-        $this->template->load('layouts/main', 'user/fb_user_newpassword');
+        $this->template->load('la_youts/main', 'user/fb_user_newpassword');
 	}
 	
 	
@@ -73,7 +73,13 @@ class Home extends MY_Controller {
 	public function profile_page()
 	{
 		$this->template->set('title', 'Profile Page');
-        $this->template->load('layouts/main', 'profile_page');
+        $this->template->load('layouts/home', 'profile_page');
+	}
+	
+	public function post_page()
+	{
+		$this->template->set('title', 'Post Page');
+        $this->template->load('layouts/home', 'post_page');
 	}
 
     /**
@@ -114,11 +120,12 @@ class Home extends MY_Controller {
         
         if($this->input->post('checkval'))
         {
+			
             $config['upload_path'] = './uploads/user_photos/temp';
             $config['allowed_types'] = 'gif|jpg|png';
-            $config['max_size'] = '1024';
-            $config['max_width'] = '1920';
-            $config['max_height'] = '1200';
+            $config['max_size'] = '2024';
+            $config['max_width'] = '2920';
+            $config['max_height'] = '2200';
             $config['file_name'] = $this->session->userdata('user_id');
             $this->load->library('upload', $config);
 
