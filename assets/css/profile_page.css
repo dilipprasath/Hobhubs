@@ -492,3 +492,11 @@
 	transform: translateX(0);
 	opacity: 1;
 }
+/*Edit Popover start */
+div.subcontent {
+	display: none;
+}
+div.subcontent2 {
+	display: none;
+}
+/*Edit Popover end */

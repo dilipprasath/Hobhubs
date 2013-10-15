@@ -11,28 +11,61 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid">
+  <div class="container-fluid" id="myMenu">
     <div class="row-fluid margin_tp_20">
-      <div class="span3 hob_box "> <span class="hb_box_header">User's Information<a href="#"><img src="http://hobhubs.com/test/assets/img/edit-icon.png" title="Click to Edit"></a></span>
-        <table class="table">
-          <tbody><tr>
-            <th>Gender </th>
-            <td>Male</td>
-          </tr>
-          <tr>
-            <th>Birthday </th>
-            <td>25/11/1989</td>
-          </tr>
-          <tr>
-            <th>Email </th>
-            <td>info@hobhup.com</td>
-          </tr>
-          <tr>
-            <th>Mobile </th>
-            <td>25812556052</td>
-          </tr>
-        </tbody></table>
-      </div>
+      <div class="span3 hob_box">
+ <span class="hb_box_header" >
+ User's Information
+   <a href="#myMenu" data-id="modules"><img src="http://hobhubs.com/test/assets/img/edit-icon.png" title="Click to Edit"></a>
+  </span>
+ <div class="subcontent" id="tools" style="display:block">
+    <table class="table">
+      <tr>
+        <th>Gender </th>
+        <td>Male</td>
+      </tr>
+      <tr>
+        <th>Birthday </th>
+        <td>25/11/1989</td>
+      </tr>
+      <tr>
+        <th>Email </th>
+        <td>info@hobhup.com</td>
+      </tr>
+      <tr>
+        <th>Mobile </th>
+        <td>25812556052</td>
+      </tr>
+    </table>
+  </div>
+  <div class="subcontent" id="modules">
+    <table class="table">
+      <tr>
+        <th>Gender </th>
+        <td><input name="" type="text" class="input-medium"  ></td>
+      </tr>
+      <tr>
+        <th>Birthday </th>
+        <td><input name="" type="text" class="input-medium"></td>
+      </tr>
+      <tr>
+        <th>Email </th>
+        <td><input name="" type="text" class="input-medium"></td>
+      </tr>
+      <tr>
+        <th>Mobile </th>
+        <td><input name="" type="text" class="input-medium"></td>
+      </tr>
+      <tr>
+        <th><button type="button" class="btn">Save</button> </th>
+        <td>
+       <a href="#" data-id="tools"><button type="button" class="btn">Cancel</button></a>
+        </td>
+      </tr>
+    </table>
+   
+  </div>
+</div>
       <div class="span3 hob_box "> <span class="hb_box_header">Location<a href="#"><img src="http://hobhubs.com/test/assets/img/edit-icon.png" title="Click to Edit"></a></span>
         <table class="table">
           <tbody><tr>

@@ -120,8 +120,22 @@ if (!('placeholder' in test)) {
     $(function () {
         $("[rel='tooltip']").tooltip();
 	 });
-</script> 
+</script>
+
 <script src="<?php echo asset_url('js/classie.js') ?>"></script> 
 <script src="<?php echo asset_url('js/modalEffects.js') ?>"></script>
+<script src="<?php echo asset_url('js/bootstrap-popover.js') ?>"></script>
+<script type="text/javascript">
+$(document).ready(function()
+{
+    $('#myMenu').on('click','a',function()
+    {
+        // fade out all open subcontents
+        $('.subcontent:visible').hide();
+        // fade in new selected subcontent
+        $('.subcontent[id='+$(this).attr('data-id')+']').show();
+    });
+});
+</script>
 </body>
 </html>
