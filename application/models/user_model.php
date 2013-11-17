@@ -93,7 +93,7 @@ class User_model  extends MY_Model {
 			$data['User_lastname'] = $this->input->post('lastname');
 			$data['User_password'] = md5(base64_encode(($this->input->post('password')."HuB")));
 			$data['User_dateofbirth']= $this->input->post('birthday_year').'-'. $this->input->post('birthday_month').'-'. $this->input->post('birthday_day');
-			$data['Gender_id']=$this->input->post('gender');
+			$data['User_gender']=$this->input->post('gender');
 			$data['User_Role_id']=1;
 			$data['User_Status_id']=3;
 			$data['User_Referrer_id']=1;

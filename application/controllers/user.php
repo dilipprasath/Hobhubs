@@ -21,9 +21,9 @@ class User extends CI_Controller {
 	function login()
 	{
 		if ($this->input->post('username')) {
-
+			
 			if($this->user_model->login()=== FALSE)
-			{
+			{		
 				$this->template->set('title', 'Login');
        			$this->template->load('layouts/main_login', 'user/login');
 			}
@@ -37,8 +37,7 @@ class User extends CI_Controller {
 						if($this->input->post('PersistentCookie')==="yes")
 						{
 						$this->user_model->set_cookie();
-						}
-						
+						}						
 						$target = base_url();
 						header("Location: ". $target);
 					}
@@ -183,8 +182,11 @@ class User extends CI_Controller {
 		$birthDate= $this->input->post('birthday_year').'/'. $this->input->post('birthday_month').'/'. $this->input->post('birthday_day');
 		$date = new DateTime($birthDate);
         $now = new DateTime();
-		$interval = $now->diff($date);
-		if($interval->y <=13)
+		//$interval = $now->diff($date); 5.3 vresion compatible function
+		//Below is olderversio compatible
+		$interval = floor(($now->format('U') - $date->format('U')) / (60*60*24*365));
+
+		if($interval <= 13)
 		{
 			$this->form_validation->set_message('age_check', 'In order to be eligible to sign up for Hobhubs.com, you must be at least 13 years old.');
 			return FALSE;
