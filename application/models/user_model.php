@@ -266,39 +266,42 @@ public function pwchange()
 	$this->db->where('User_salt =', $key); 
 	if($this->db->update('User', $data))
 	{
-		return TRUE; 
+		return $data['User_salt']; 
 	}
 	else return FALSE;
 }
 
-//FB
+//FB and GPlus
 
 
 
-public function log_in($facebook_user){
+public function log_in($salt){
 
-		//echo $facebook_user['name'];
-
-		$data = array(
-			'userloggedin'=>TRUE,
-			'email' => $facebook_user['email'],
-			'firstname' =>$facebook_user['name'] 
-			);
-		$this->session->set_userdata($data);
+		$this->db->where('User_salt =',$salt); 
+		$res = $this->db->get('User');
+		   //$res = $this->db->query('select * from user where username = "' . $username .'" AND password = "' . $password . '"');
+		if($res->num_rows()>0)
+		{
+			$row = $res->row();
+			$email = $row->User_email;	
+			$password=$row->User_password;
+			
+			$data=$this->user_model->auth_user($email,$password);
+		}
 
 	
 
 	}
 
 
-/**
-	 * fb check is member
+	/**
+	 *  check is member
 	 *
 	 * @return TRUE or FALSE
 	 **/
-	public function is_member($facebook_user){
+	public function is_member($user){
 
-		$this->db->where('User_email',$facebook_user['email']);
+		$this->db->where('User_email',$user['email']);
 
 		$query = $this->db->get('User');
 
@@ -323,7 +326,7 @@ public function log_in($facebook_user){
 		$last_name = $facebook_user['last_name'];
 		$facebook_id = $facebook_user['id'];
 		$email = $facebook_user['email'];
-		$salt = md5(base64_encode($this->input->post('newpw').rand(10,100)));
+		$salt = md5(base64_encode($facebook_user['email'].rand(10,100)));
 		$data = array(
 			'User_email' => $email,
 			'User_firstname' => $first_name,
@@ -342,7 +345,30 @@ public function log_in($facebook_user){
 		
 	}
 
+	public function sign_up_from_google($google_user){
 
+		$first_name = $google_user['given_name'];
+		$last_name = $google_user['family_name'];
+		//$gplus_id = $google_user['id'];
+		$email = $google_user['email'];
+		$salt = md5(base64_encode($google_user['email'].rand(10,100)));
+		$data = array(
+			'User_email' => $email,
+			'User_firstname' => $first_name,
+			'User_lastname' => $last_name,
+			'User_salt' => $salt,				
+			'User_Referrer_id' =>3,
+			'User_Role_id'=>1,
+			'User_Status_id'=>1
+			);
+
+		if($this->db->insert('User', $data))
+		{
+			return $data;
+		}
+
+
+	}
 
 }
 

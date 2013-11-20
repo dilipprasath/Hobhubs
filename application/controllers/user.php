@@ -221,7 +221,7 @@ public function facebook_request()
 				{
 					if($this->user_model->is_member($facebook_user))
 					{
-						$this->user_model->log_in($facebook_user);
+						//$this->user_model->log_in($facebook_user);
 						$target= base_url();	
 						redirect($target,'refresh');	
 					}
@@ -249,10 +249,11 @@ public function facebook_request()
 	public function fbpass()
 	{
 		if ($this->input->post('newpw')) {
-
-			if($this->user_model->pwchange())
+				$salt=$this->user_model->pwchange();
+			if($salt)
 				{
-				$target= base_url().'user/pwchanged';	
+				$this->user_model->log_in($salt);
+				$target= base_url();	
 				redirect($target,'refresh');
 				}
 
@@ -261,6 +262,7 @@ public function facebook_request()
 		//$this->user_model->log_in($facebook_user);
 		//redirect(base_url().'/members');
 	}
+
 
 //Google Plus
 		/**
@@ -286,10 +288,32 @@ public function facebook_request()
 
 		if(null !== $this->session->userdata('access_token'))
 		{
-			$me = $this->gplusconnect->set_access($this->session->userdata('access_token'));
-			print_r($me);
+			$gdata = $this->gplusconnect->set_access($this->session->userdata('access_token'));
+
+			if(isset($gdata['user']['email']))
+				{
+					
+					if($this->user_model->is_member($gdata['user']))
+					{
+						//$this->user_model->log_in($gdata['user']);
+						$target= base_url();	
+						redirect($target,'refresh');	
+					}
+					else
+					{
+						
+						$data=$data=$this->user_model->sign_up_from_google($gdata['user']);
+						$this->template->set('title', 'My website');
+				        $this->template->load('layouts/main', 'user/gplus_user_newpassword',$data);
+				    }
+				}
 		}
 	}
+
+	
+
+
+	
 
 
 }

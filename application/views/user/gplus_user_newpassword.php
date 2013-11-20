@@ -1,16 +1,16 @@
 <div class="login_box">
 <div class="row-fluid">
 <h4 class="lp_color">Sign Up using Google +</h4>
-<form action="user/register.php" method="post" name="login_form" >
+<form action="<?php echo base_url('user/fbpass')."/".$User_salt ?>" method="post" name="login_form" >
 <div class="row-fluid">
-<input name="firstname" type="text" class=" input_fname padding2 span6"  placeholder="First Name" required />
-<input name="lastname" type="text" class="input_lname padding2 span6" placeholder="Last Name"  required />
+<input name="firstname" type="text" class=" input_fname padding2 span6"  value="<?php echo $User_firstname ?>" required />
+<input name="lastname" type="text" class="input_lname padding2 span6" value="<?php echo $User_lastname ?>"  required />
 </div>
-<input name="email" type="email" class="input_emailer padding2 span12" placeholder="Email / User Name"  required disabled />
+<input type="email" class="input_emailer padding2 span12" value="<?php echo $User_email ?>"  disabled />
 <div id="myform">      
-<input name="username" type="password" class="input_username span12 padding2 " placeholder="Password" id="password" title="Password should contain atleast 1 (special characters, Numbers, Uppercase & Lowercase Letter)" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])^\D.{6,}"  />
+<input name="newpw" type="password" class="input_username span12 padding2 " placeholder="Password" id="password" title="Password should contain atleast 1 (special characters, Numbers, Uppercase & Lowercase Letter)" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])^\D.{6,}"  />
 </div>
-<input name="password" type="password" class="input_password span12 padding2" placeholder="Confirm  Password" id="passwordconf"  oninput="check(this)" required 
+<input name="confirmpw" type="password" class="input_password span12 padding2" placeholder="Confirm  Password" id="passwordconf"  oninput="check(this)" required 
 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])^\D.{6,}" />
 <div class="birthday_cal">      
 <select required name="birthday_month" id="month" class="span3" disabled >
