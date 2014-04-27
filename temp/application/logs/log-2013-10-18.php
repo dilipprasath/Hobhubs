@@ -1,0 +1,15 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
+
+ERROR - 2013-10-18 08:29:17 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\github\Hobhubs\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2013-10-18 08:29:17 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\github\Hobhubs\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2013-10-18 08:41:58 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\github\Hobhubs\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2013-10-18 08:42:05 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\github\Hobhubs\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2013-10-18 08:44:49 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\github\Hobhubs\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2013-10-18 08:44:50 --> Unable to create session in user.php Fun: auth
+ERROR - 2013-10-18 08:44:54 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\github\Hobhubs\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2013-10-18 08:44:54 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\github\Hobhubs\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2013-10-18 08:45:01 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\github\Hobhubs\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2013-10-18 08:45:47 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\github\Hobhubs\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2013-10-18 08:45:47 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\github\Hobhubs\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2013-10-18 08:45:47 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\github\Hobhubs\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2013-10-18 09:04:14 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\github\Hobhubs\system\database\drivers\mysql\mysql_driver.php 91

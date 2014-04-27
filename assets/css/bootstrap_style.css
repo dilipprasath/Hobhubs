@@ -1,0 +1,46 @@
+@media print {
+	.hobby-boxes{margin-left: 60px;}
+	.prev-button button,.next-button button{width:80px !important;height:60px !important;text-align:center !important;}
+	.prev-button{position:absolute;top:40%;}
+	.next-button{position:absolute;top:40%;}
+	.profile-picture-box{background-color:#254061;height:100% !important;position:fixed;}
+	.hobup-logo{margin:10px;}
+}
+@media (min-width: 1200px) {
+	.hobby-boxes{margin-left: 60px;}
+	.prev-button button,.next-button button{width:80px !important;height:60px !important;text-align:center !important;}
+	.prev-button{position:absolute;top:40%;}
+	.next-button{position:absolute;top:40%;}
+	.profile-picture-box{background-color:#254061;height:100% !important;position:fixed;}
+	.hobup-logo{margin:13px;}
+	.add-photo-box{width:140px;height:140px;}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	.hobby-boxes{margin-left: 60px;}
+	.prev-button button,.next-button button{width:80px !important;height:60px !important;text-align:center !important;}
+	.prev-button{position:absolute;top:40%;}
+	.next-button{position:absolute;top:40%;}
+	.profile-picture-box{background-color:#254061;height:100% !important;position:fixed;}
+	.hobup-logo{margin:13px;}
+	.add-photo-box{width:140px;height:140px;}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.hobby-boxes{margin-left: 60px;}
+	.prev-button button,.next-button button{width:80px !important;height:60px !important;text-align:center !important;}
+	.prev-button{position:absolute;top:40%;}
+	.next-button{position:absolute;top:40%;}
+	.profile-picture-box{background-color:#254061;height:100% !important;position:fixed;}
+	.hobup-logo{margin:13px;}
+	.add-photo-box{width:140px;height:140px;}
+}
+@media (max-width: 767px) {
+	.hobby-boxes{margin:auto;}
+	.main-searchbar-bg{border-radius:0;-moz-border-radius:0;-webkit-border-radius:0;}
+	.prev-button button,.next-button button{width:65px !important;height:50px !important;text-align:center !important;font-size:12px;}
+	.prev-button{position:fixed;top:40%;}
+	.next-button{position:fixed;top:40%;}
+	.profile-picture-box{background-color:#254061;}
+	.hobup-logo{margin:auto;border-radius:0 0 10px 10px;-moz-border-radius:0 0 10px 10px;-webkit-border-radius:0 0 10px 10px;}
+	.add-photo-box{width:140px;height:140px;margin:auto;}
+	.add-photo-box{}
+}

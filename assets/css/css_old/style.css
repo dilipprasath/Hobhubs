@@ -1,0 +1,336 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+body{background-color:#eeeeee;font-family: 'Source Sans Pro', sans-serif !important;}
+.bgcolor{ background:#FFF !important;}
+::-webkit-input-placeholder{color:#666}
+:-moz-placeholder{color:#666}
+::-moz-placeholder{color:#666}
+:-ms-input-placeholder{color:#666}
+header{left:0;right:0}
+.checkbox{ font-size:16px !important;}
+.head_bg{background-color:#5e4b98 !important;left:0;right:0}
+.hobhubs_logo{padding:10px 20px}
+input{font-size:14px !important;margin:0;background:#f4f1f1 !important;border:1px solid #fff;border-radius:0 !important}
+.padding2{height:40px !important}
+input:focus{border-color:#c0a1db !important;outline:none !important}
+.normal_font{font-weight:normal !important}
+.margin_tp_20{margin-top:20px !important}
+.margin_bt_20{margin-bottom:20px !important}
+.margin_tp_10{margin-top:10px !important}
+.margin_bt_10{margin-bottom:10px !important}
+.margin_tp_30{margin-top:30px !important}
+.margin_bt_30{margin-bottom:30px !important}
+.margin_tp_40{margin-top:40px !important}
+.margin_bt_40{margin-bottom:40px !important}
+.pad_10{ padding:10px;}
+.navbar-fixed-top{position:static !important}
+.login_box{width:335px;margin:25px auto;-webkit-box-shadow:0 0 19px rgba(0,0,0,0.65);-moz-box-shadow:0 0 19px rgba(0,0,0,0.65);box-shadow:0 0 19px rgba(0,0,0,0.65);padding:30px;background-color:#FFF}
+.f_name,.l_name{width:40%}
+.hh_checkbox{width:auto !important;border:0;box-shadow:none !important}
+.hh_cb{margin-top:20px !important;font-size:14px}
+.hh_cbbox{margin:20px 0;}
+.map_img{display:block;margin:auto;text-align:center}
+.lp_color{color:#141d58;font-size:15.5px}
+.panel a#login_pop,.panel a#join_pop{border:2px solid #aaa;color:#fff;display:block;float:right;margin-right:10px;padding:5px 10px;text-decoration:none;text-shadow:1px 1px #000;-webkit-border-radius:10px;-moz-border-radius:10px;-ms-border-radius:10px;-o-border-radius:10px;border-radius:10px}
+a#login_pop:hover,a#join_pop:hover{border-color:#eee}
+.overlay{background-color:rgba(240,248,255,0.5);bottom:0;cursor:default;left:0;opacity:0;position:fixed;right:0;top:0;visibility:hidden;z-index:1;-webkit-transition:opacity .5s;-moz-transition:opacity .5s;-ms-transition:opacity .5s;-o-transition:opacity .5s;transition:opacity .5s}
+.overlay:target{visibility:visible;opacity:1}
+.popup{background-color:#fff;display:inline-block;left:50%;opacity:0;padding:15px 30px;position:fixed;text-align:justify;top:40%;visibility:hidden;z-index:10;font-family:Tahoma,Geneva,sans-serif !important;-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-border-radius:10px;-moz-border-radius:10px;-ms-border-radius:10px;-o-border-radius:10px;border-radius:10px;-webkit-box-shadow:0 1px 1px 2px rgba(0,0,0,0.4) inset;-moz-box-shadow:0 1px 1px 2px rgba(0,0,0,0.4) inset;-ms-box-shadow:0 1px 1px 2px rgba(0,0,0,0.4) inset;-o-box-shadow:0 1px 1px 2px rgba(0,0,0,0.4) inset;box-shadow:0 1px 1px 2px rgba(0,0,0,0.4) inset;-webkit-transition:opacity .5s,top .5s;-moz-transition:opacity .5s,top .5s;-ms-transition:opacity .5s,top .5s;-o-transition:opacity .5s,top .5s;transition:opacity .5s,top .5s}
+.overlay:target+.popup{opacity:1;visibility:visible}
+.close{background-color:#5e4b98;height:30px;line-height:30px;position:absolute;right:0;text-align:center;text-decoration:none;top:-15px;width:30px;border:#FFF solid 2px;-webkit-border-radius:15px;-moz-border-radius:15px;-ms-border-radius:15px;-o-border-radius:15px;border-radius:15px}
+.close:before{color:rgba(255,255,255,0.9);content:"X";font-size:16px;text-shadow:0 -1px rgba(0,0,0,0.9)}
+.close:hover{background-color:#333;border:#FFF solid 2px}
+.popup p,.popup div{margin-bottom:10px}
+.popup label{display:inline-block;text-align:left}
+.popup input[type="text"],.popup input[type="password"]{border:1px solid;border-color:#999 #ccc #ccc;margin:0;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;border-radius:2px}
+.birthday_cal{margin-top:15px}
+.padding1{padding:20px 0}
+.white_bg{background-color:#FFF !important}
+.recovery .hideable-wrapper{overflow:hidden;-ms-transition:all 500ms ease-in-out;-moz-transition:all 500ms ease-in-out;-o-transition:all 500ms ease-in-out;-webkit-transition:all 500ms ease-in-out;transition:all 500ms ease-in-out}
+.toHide{margin-left:15px;color:#666 !important}
+.stacked_label{color:#333 !important}
+.ar_ct_button{margin:20px 0}
+.hh_button{display:inline-block;color:#fff;font-size:16px;padding:0 30px;text-decoration:none;cursor:pointer;width:140px;height:40px;background-color:#5d4a9b !important;border:none !important}
+.hh_button:hover{background:#7b6ab1 !important;background-color:#7b6ab1 !important}
+.captcha_border{border:#CCC 1px solid;width:180px;padding:10px 20px;height:90px}
+.toHide ul li{display:inline}
+.account_recv2{border:#CCC 1px solid;padding:10px 10px;height:57px}
+.user_image{float:left;margin-right:20px}
+.user_email{float:left;line-height:30px}
+/* Account Recovery Page CSS End */
+/* Large desktop */
+@media (min-width: 1200px) 
+{
+.login_box{ width:335px;}
+.toHide1{ margin:15px 0px 0px 242px !important;}
+.toHide{ margin:15px;}
+.account_recv2{ padding:10px;}
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { 
+
+.login_box{ width:335px;}
+.toHide1{ margin:15px 0px 0px 242px !important;}
+.toHide{ margin:15px;}
+.account_recv2{ padding:10px;}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { 
+.login_box{ width:335px;}
+.toHide1{ margin:15px 0px 0px 242px !important;}
+.toHide{ margin:15px;}
+.account_recv2{ padding:10px;}
+.hh_button{ margin-bottom:10px;}
+.input_fname, .input_lname{ margin-bottom:10px !important;}
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+.login_box{ width:80%;}
+.toHide{ margin:0 !important;}
+.toHide1{ margin:0 !important;}
+.account_recv2{ padding:0; margin-bottom:10px;}
+.hh_button{ margin-bottom:10px;}
+.input_fname, .input_lname{ margin-bottom:10px !important;}
+.birthday_cal select{ width:32% !important;}
+.popup { top:50%;}
+.popup
+{
+	overflow:scroll;
+	overflow-x:hidden;
+	height:350px !important;
+}
+}
+
+/************Profile Photo Crop CSS Start*****************/
+
+/* jcrop styles */
+.jc-demo-box {
+  position: relative;
+  text-align: left;
+  margin: 1.5em auto;
+  background: #fff;
+  -webkit-box-shadow: 0 3px 9px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0 3px 9px -1px rgba(0,0,0,0.75);
+  box-shadow: 0 3px 9px -1px rgba(0,0,0,0.75);
+  padding: 1em 2em 2em;
+}
+
+
+/* Apply these styles only when #preview-pane has
+   been placed within the Jcrop widget */
+.jcrop-holder #preview-pane {
+  display: block;
+  position: absolute;
+  z-index: 2000;
+  top: 10px;
+  right: -210px;
+  background-color: #fff;
+  padding: 6px;
+  border: 1px solid #bcbcbc;
+}
+
+/* The Javascript code will set the aspect ratio of the crop
+   area based on the size of the thumbnail preview,
+   specified here */
+#preview-pane .preview-container {
+  width: 175px;
+  height: 215px;
+  overflow: hidden;
+}
+/* jquery.Jcrop.css v0.9.12 - MIT License */
+
+.jcrop-holder {
+  direction: ltr;
+  text-align: left;
+}
+/* Selection Border */
+.jcrop-vline,
+.jcrop-hline {
+  background: #ffffff url("Jcrop.gif");
+  font-size: 0;
+  position: absolute;
+}
+.jcrop-vline {
+  height: 100%;
+  width: 1px !important;
+}
+.jcrop-vline.right {
+  right: 0;
+}
+.jcrop-hline {
+  height: 1px !important;
+  width: 100%;
+}
+.jcrop-hline.bottom {
+  bottom: 0;
+}
+/* Invisible click targets */
+.jcrop-tracker {
+  height: 100%;
+  width: 100%;
+  /* "turn off" link highlight */
+  -webkit-tap-highlight-color: transparent;
+  /* disable callout, image save panel */
+  -webkit-touch-callout: none;
+  /* disable cut copy paste */
+  -webkit-user-select: none;
+}
+/* Selection Handles */
+.jcrop-handle {
+  background-color: #333333;
+  border: 1px #eeeeee solid;
+  width: 7px;
+  height: 7px;
+  font-size: 1px;
+}
+.jcrop-handle.ord-n {
+  left: 50%;
+  margin-left: -4px;
+  margin-top: -4px;
+  top: 0;
+}
+.jcrop-handle.ord-s {
+  bottom: 0;
+  left: 50%;
+  margin-bottom: -4px;
+  margin-left: -4px;
+}
+.jcrop-handle.ord-e {
+  margin-right: -4px;
+  margin-top: -4px;
+  right: 0;
+  top: 50%;
+}
+.jcrop-handle.ord-w {
+  left: 0;
+  margin-left: -4px;
+  margin-top: -4px;
+  top: 50%;
+}
+.jcrop-handle.ord-nw {
+  left: 0;
+  margin-left: -4px;
+  margin-top: -4px;
+  top: 0;
+}
+.jcrop-handle.ord-ne {
+  margin-right: -4px;
+  margin-top: -4px;
+  right: 0;
+  top: 0;
+}
+.jcrop-handle.ord-se {
+  bottom: 0;
+  margin-bottom: -4px;
+  margin-right: -4px;
+  right: 0;
+}
+.jcrop-handle.ord-sw {
+  bottom: 0;
+  left: 0;
+  margin-bottom: -4px;
+  margin-left: -4px;
+}
+/* Dragbars */
+.jcrop-dragbar.ord-n,
+.jcrop-dragbar.ord-s {
+  height: 7px;
+  width: 100%;
+}
+.jcrop-dragbar.ord-e,
+.jcrop-dragbar.ord-w {
+  height: 100%;
+  width: 7px;
+}
+.jcrop-dragbar.ord-n {
+  margin-top: -4px;
+}
+.jcrop-dragbar.ord-s {
+  bottom: 0;
+  margin-bottom: -4px;
+}
+.jcrop-dragbar.ord-e {
+  margin-right: -4px;
+  right: 0;
+}
+.jcrop-dragbar.ord-w {
+  margin-left: -4px;
+}
+/* The "jcrop-light" class/extension */
+.jcrop-light .jcrop-vline,
+.jcrop-light .jcrop-hline {
+  background: #ffffff;
+  filter: alpha(opacity=70) !important;
+  opacity: .70!important;
+}
+.jcrop-light .jcrop-handle {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background-color: #000000;
+  border-color: #ffffff;
+  border-radius: 3px;
+}
+/* The "jcrop-dark" class/extension */
+.jcrop-dark .jcrop-vline,
+.jcrop-dark .jcrop-hline {
+  background: #000000;
+  filter: alpha(opacity=70) !important;
+  opacity: 0.7 !important;
+}
+.jcrop-dark .jcrop-handle {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background-color: #ffffff;
+  border-color: #000000;
+  border-radius: 3px;
+}
+/* Simple macro to turn off the antlines */
+.solid-line .jcrop-vline,
+.solid-line .jcrop-hline {
+  background: #ffffff;
+}
+/* Fix for twitter bootstrap et al. */
+.jcrop-holder img,
+img.jcrop-preview {
+  max-width: none;
+}
+
+#overlay {
+    display: none;
+    cursor: pointer;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#overlay-content {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    width: 800px;
+    height: 600px;
+    padding: 20px;
+    background: #000;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -400px;
+    margin-top: -300px;
+    color: #fff;
+}
+
+/************Profile Photo Crop CSS End*****************/
+

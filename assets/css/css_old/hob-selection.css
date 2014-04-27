@@ -1,0 +1,237 @@
+#img_left, #img_right {
+	position: fixed;
+	top: 250px;
+	z-index: 100;
+	text-align: center;
+}
+#img_left a, #img_right a {
+	display: block;
+	width: 60px;
+	height: 35px;
+	background: #5d4a9b;
+	text-decoration: none;
+	color: #FFF;
+	padding-top: 15px;
+}
+#img_left {
+	left: 0;
+}
+#img_right {
+	right: 0;
+}
+#img_left2, #img_right2 {
+	position: fixed;
+	top: 250px;
+	z-index: 100;
+	text-align: center;
+}
+#img_left2 a, #img_right2 a {
+	display: block;
+	width: 60px;
+	height: 35px;
+	background: #999;
+	text-decoration: none;
+	color: #FFF;
+	padding-top: 15px;
+	cursor: default;
+}
+#img_left2 {
+	left: 0;
+}
+#img_right2 {
+	right: 0;
+}
+.hob_select_box {
+	width: 38%;
+	/*height:480px;*/
+	margin: 25px auto;
+	-webkit-box-shadow: 0 0 19px #a098bb;
+	-moz-box-shadow: 0 0 19px #a098bb;
+	box-shadow: 0 0 19px #a098bb;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#a098bb')";
+ filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#a098bb');
+	padding: 10px 20px;
+	background-color: #FFF
+}
+.hobby_logo img {
+	display: block;
+	margin: auto;
+}
+.hobby_name {
+	text-align: center;
+}
+.mrt20 {
+	margin: 40px 0 0 70px;
+}
+.hobby_name {
+	font-family: Tahoma, Geneva, sans-serif !important;
+}
+.profile_photo_space {
+	width: 205px;
+	height: 225px;
+	background-color: #dbeef4;
+	margin: auto;
+	padding: 5px;
+	border: #96cfde solid 2px;
+}
+.profile_photo_space_inner {
+	border: #96cfde dashed 2px;
+	height: 220px;
+}
+.profile_photo_up {
+	width: 260px;
+	margin: 10px auto;
+}
+.profile_photo_input {
+	width: 190px !important;
+}
+.photo_crop {
+	background-color: #dbeef4;
+	width: 420px;
+	margin: auto;
+	height: 370px;
+	border: #afdae6 solid 2px;
+}
+.photo_crop_link {
+	margin: 10px auto;
+}
+/* Large desktop */
+@media (min-width: 1200px) {
+.hob_select_box {
+	width: 38%;
+}
+.profile_photo_input {
+	width: 190px !important;
+}
+.photo_crop {
+	width: 420px;
+	height: 370px;
+}
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+.hob_select_box {
+	width: 38%;
+}
+.profile_photo_input {
+	width: 190px !important;
+}
+.photo_crop {
+	width: auto;
+	height: 370px;
+}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+.hob_select_box {
+	width: 58%;
+}
+.profile_photo_input {
+	width: 190px !important;
+}
+.photo_crop {
+	width: auto;
+	height: 220px;
+}
+.mrt20 {
+	margin: 40px 0 0 0;
+}
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+.hob_select_box {
+	width: 73%;
+}
+.photo_crop_link {
+	width: 200px;
+}
+.photo_crop {
+	width: auto;
+	height: 220px;
+}
+.profile_photo_up {
+	width: 200px !important;
+}
+.profile_photo_up input {
+	width: 90px !important;
+}
+.profile_photo_space {
+	width: 180px;
+}
+.mrt20 {
+	margin: 40px 0 0 0;
+}
+}
+/*image select code */
+ul.thumbnails.image_picker_selector {
+	overflow: auto;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+ul.thumbnails.image_picker_selector ul {
+	overflow: auto;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+ul.thumbnails.image_picker_selector li.group_title {
+	float: none;
+}
+ul.thumbnails.image_picker_selector li {
+	margin: 5px 35px 0px 30px;
+	float: left;
+}
+ul.thumbnails.image_picker_selector li .thumbnail {
+	padding: 6px;
+	border: 1px solid #dddddd;
+}
+ul.thumbnails.image_picker_selector li .thumbnail.selected {
+	background: #0088cc;
+}
+/* profile page css  */
+.top_bg_left, .top_bg_right {
+	float: left;
+	width: 40%;
+}
+.top_bg_mid {
+	float: left;
+	width: 20%;
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+.top_bg_mid {
+	width: 100%;
+}
+.top_bg_mid img {
+	display: block;
+	margin: auto;
+}
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+.top_bg_mid {
+	width: 100%;
+}
+.top_bg_mid img {
+	display: block;
+	margin: auto;
+}
+}
