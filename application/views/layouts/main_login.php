@@ -4,11 +4,11 @@
 <title><?php echo $title ?> | <?php echo $this->config->item('site_name') ?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="<?php echo base_url('img/fav.ico') ?>" rel="shortcut icon" type="image/ico" />
-
 <!-- Bootstrap -->
 <link href="<?php echo asset_url('css/bootstrap.min.css') ?>" rel="stylesheet" media="screen">
 <link href="<?php echo asset_url('css/bootstrap-responsive.min.css') ?>" rel="stylesheet" media="screen">
 <link href="<?php echo asset_url('css/style.css') ?>" rel="stylesheet" media="screen">
+<link href="<?php echo asset_url('css/hobup-style.css') ?>" rel="stylesheet" media="screen">
 <!--[if lte IE9 ]>
 <link rel="stylesheet" type="text/css" href="<?php echo asset_url('css/ie9-down.css') ?>" />
 <![endif]-->
@@ -18,17 +18,10 @@
 </head>
 <body>
 <header>
-<div class="head_bg navbar-fixed-top">
-<div class="row-fluid">
-<div class="span4  hobhubs_logo">
-<a href="<?php echo base_url() ?>">
-<img src="<?php echo asset_url('img/hobhubs_logo.png') ?>">
-</a>
-</div>
-<div class="span8"><br>
-
-</div>
-</div>
+<div class="container-fluid">
+  <div class="row lp-header-bg padding-t10 padding-b10"> 
+  <a href="<?php echo base_url() ?>">
+  <img src="<?php echo asset_url('img/hobhubs_logo.png') ?>" width="96" height="44" class="margin-l10"></a> </div>
 </div>
 </header>
 <?php echo  $contents ?>

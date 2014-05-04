@@ -1,0 +1,60 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+body{font-family: 'Source Sans Pro', sans-serif !important;}
+.lp-body-bg {
+	background-color: #eeeeee;
+	font-family: 'Source Sans Pro', sans-serif !important;
+}
+.lp-header-bg {
+	background-color: #5e4b98;
+}
+.lp-login-box {
+	width: 35%;
+	margin: auto;
+	background-color: #FFF;
+	-webkit-box-shadow: 0 0 19px rgba(0,0,0,0.65);
+	-moz-box-shadow: 0 0 19px rgba(0,0,0,0.65);
+	box-shadow: 0 0 19px rgba(0,0,0,0.65);
+	padding: 30px;
+}
+.fb_tw_logo {
+	display: block;
+	margin: auto;
+}
+.btn {
+	border-radius: 0!important;
+	font-size: 16px;
+	height: 40px;
+	background-color: #5d4a9b !important;
+	border: none !important;
+}
+.btn-signup-email {
+	width: 60% !important;
+	margin: auto !important;
+}
+.lp-input-text {
+	border: 1px solid #ccc!important;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075)!important;
+	border-radius: 0!important;
+	background-color: #F7F7F7;
+}
+.btn-account-recovery
+{
+	width:40% !important;
+}
+.modal-header
+{
+	border:none !important;	
+}
+.modal-body input, .modal-body select
+{
+	font-size:14px !important;
+}
+.modal
+{
+	overflow:hidden !important;
+}
+.modal-dialog
+{
+	width:410px;
+	margin:70px auto 0 auto !important;
+}

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
+		<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- Bootstrap -->
-		  <!-- Include all compiled plugins (below), or include individual files as needed -->
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<link href="<?php echo asset_url('css/bootstrap_style.css') ?>" rel="stylesheet">
+		<link href="<?php echo asset_url('css/bootstrap_style.css') ?>" rel="stylesheet">
 		<link href="<?php echo asset_url('css/popup.css') ?>" rel="stylesheet">
 		<link href="<?php echo asset_url('css/messi.css') ?>" rel="stylesheet">
 
@@ -16,8 +18,6 @@
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
 		<script src="<?php echo asset_url('js/jquery-1.11.0.min.js') ?>"></script>
-
-		
 		<script type='text/javascript'>
 			$(function(){
 			var imgn = $("#lorun").val();
@@ -27,90 +27,108 @@
 			  }		  
 			});
 		</script>
-	</head>
-	
-	<body>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-2">
-					<div class="profile-picture-box text-center">
-						<?php if(isset($User_img)) 
+		</head>
+
+		<body>
+<div class="container">
+          <div class="row">
+    <div class="col-md-2">
+              <div class="profile-picture-box text-center">
+        <?php if(isset($User_img)) 
 						{ ?>
-							<img src="<?php echo base_url('uploads/user_photos/temp')."/".$User_img; ?>"  width="150" height="150" class="hobup-logo img-responsive">
-						<?php 
+        <img src="<?php echo base_url('uploads/user_photos/temp')."/".$User_img; ?>"  width="150" height="150" class="hobup-logo img-responsive">
+        <?php 
 						} 
 						else
 						{ ?>
-							<img src="<?php echo base_url('uploads/user_photos/temp/avatar.jpg') ?>"  width="150" height="150" class="hobup-logo img-responsive"> 
-						<?php 
+        <img src="<?php echo base_url('uploads/user_photos/temp/avatar.jpg') ?>"  width="150" height="150" class="hobup-logo img-responsive">
+        <?php 
 						} ?>
-						<span class="profile-name"><?php if(isset($User_firstname)) { echo $User_firstname; } ?><br><?php if(isset($User_lastname)) { echo $User_lastname; } ?></span>
-					</div>
-				</div>
-				<?php if(isset($error)) { echo $error; } ?>
-				<div class="col-md-10">
-					<div class="row">
-						<div class="col-md-4">
-							<div class="text-center margin-t20 ">
-								<a href="#" id="open-pop-up-1" class="add-photo-box  padding-t50" >
-								<img src="<?php echo base_url('img/add-icon.gif'); ?>" width="30" height="29"> Add Photo</a>
-								<!--Form which contains File input type & auto submit -->
-								<!--  <form method="post" id="imgup" name="imgup" enctype="multipart/form-data" action="<?php echo base_url(); ?>home/imgupload" class="form-search">
-								-->
-								<?php echo form_open_multipart('home/imgupload','id="imgup"');?>
-									<input type="hidden" name="lorun" id="lorun" value="<?php if(isset($img_tmp_name)) { echo $img_tmp_name; } ?>">
-									<input type="file" id="userfile" name="userfile" size="20" />
-								</form>
-								<br /><br />
-								<!--Popup Start-->
-								<div id="toPopup">
-									<div class="close"></div>
-									<span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
-									<div id="popup_content"> 							
-										<form id="save2" action="<?php echo base_url();?>home/imgsave" method="post">
-											<?php if(isset($img_tmp_name)) { ?>
-												<img src="<?php echo base_url()."prof_temp/".$img_tmp_name; ?>" height="200" width="350">
-											<?php } ?>
-											<br><input type="text" name="cmt"  size="100" maxlength="99" id="cmt" placeholder="Enter your Text here (99 characters)" class="cmt">
-											<a href="#" id="tag" class="tag" >
-												<img id="tagimg" src="<?php echo base_url()."img/tag-icon-bw.png"; ?>">
-											</a>
-											<div id="characterLeft"></div>
-											<input type="hidden" name="taghere" id="taghere"  class="taghere">
-											<input type="hidden" name="img_name" value="<?php echo $img_tmp_name;?>">
-											<input type="button" name="save" id="save" value="save">
-											<input type="button" name="cancel" id="cancel" value="cancel">
-										</form>
-										<input type="hidden" name="base" id="base" value="<?php echo base_url();?>">
-									</div> 		
-									<input type="hidden" name="indexpage" id="indexpage" value="<?php echo base_url('/home/index');?>">
-								</div>
-								<!--Popup End--> 
-							</div>
-						</div>  
-					</div>
-				</div>
-				
-				<div style="margin-left:200px;">
+        <span class="profile-name">
+                <?php if(isset($User_firstname)) { echo $User_firstname; } ?>
+                <br>
+                <?php if(isset($User_lastname)) { echo $User_lastname; } ?>
+                </span> </div>
+            </div>
+    <?php if(isset($error)) { echo $error; } ?>
+    <div class="col-md-10">
+              <div class="row">
+        <div class="col-md-4">
+                  <div class="text-center margin-t20 "> <a href="#" id="open-pop-up-1" class="add-photo-box  padding-t50" onclick="$('input[id=userfile]').click();"> <img src="<?php echo base_url('img/add-icon.png'); ?>" width="30" height="29"> Add Photo</a> 
+            <!--Form which contains File input type & auto submit --> 
+            <!--  <form method="post" id="imgup" name="imgup" enctype="multipart/form-data" action="<?php echo base_url(); ?>home/imgupload" class="form-search">
+								--> 
+            <?php echo form_open_multipart('home/imgupload','id="imgup"');?>
+            <input type="hidden" name="lorun" id="lorun" value="<?php if(isset($img_tmp_name)) { echo $img_tmp_name; } ?>">
+            <input style="display:none;" type="file" id="userfile" name="userfile" size="20" />
+            </form>
+            <br />
+            <br />
+            <!--Popup Start-->
+            <div id="toPopup"> 
+                      <!--<div class="close"></div>-->
+                      <div class="main-photo-comment-icon"> <a href="#" class="main-comment-icon"><img src="<?php echo base_url()."img/close-icon.png"; ?>" width="14" height="14"></a> <a href="#" class="main-heart-icon"><img src="<?php echo base_url()."img/save-icon.png"; ?>" width="14" height="14"></a> </div>
+                      <div> </div>
+                      <span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
+                      <div id="popup_content">
+                <form id="save2" action="<?php echo base_url();?>home/imgsave" method="post">
+                          <?php if(isset($img_tmp_name)) { ?>
+                          <img src="<?php echo base_url()."prof_temp/".$img_tmp_name; ?>" height="200" width="350">
+                          <?php } ?>
+                          <br>
+                          <input type="text" name="cmt"  class="imgup_pop_text" size="100" maxlength="99" id="cmt" placeholder="Enter your Text here (99 characters)" class="cmt">
+                          <span id="characterLeft"></span> <a href="#" id="tag" class="tag" > <img id="tagimg" src="<?php echo base_url()."img/tag-icon-bw.png"; ?>"> </a>
+                          <input type="hidden" name="taghere" id="taghere"  class="taghere">
+                          <input type="hidden" name="img_name" value="<?php echo $img_tmp_name;?>">
+                          <input type="button" name="save" id="save" value="save">
+                          <input type="button" name="cancel" id="cancel" value="cancel">
+                        </form>
+                <input type="hidden" name="base" id="base" value="<?php echo base_url();?>">
+              </div>
+                      <input type="hidden" name="indexpage" id="indexpage" value="<?php echo base_url('/home/index');?>">
+                    </div>
+            <!--Popup End--> 
+          </div>
+                </div>
+      </div>
+            </div>
+    <div style="margin-left:200px;">
 					<?php if($user_profile_details)
 					{
 						foreach($user_profile_details as $row)
 						{
-							$img_name = $row->Profile_image_name; ?>
+						
+						$taghere = $row->taghere;
+						
+						$wordsbyarray = explode(" ",$taghere);
+						$wordlen = count($wordsbyarray);
+						?>
+							<div>
+						<?php
+						for($i = 0;$i<$wordlen;$i++){
+							$retvalue = $this->home_model->findvalidtag($wordsbyarray[$i]);
+							echo $retvalue."&nbsp;";
+						}
+						?>
+						</div>
+						<?php
+						 $img_name = $row->Profile_image_name; ?>
 							<div>
 								<img src="<?php echo base_url()."prof_img/".$img_name; ?>" height="200" width="350">
 							</div>
+							
+							
 						<?php 
 						}
 					}?>
 				</div>
-			</div>
-		</div>
-		<script src="<?php echo asset_url('js/popup.js') ?>"></script>
-		<!--<script src="<?php //echo asset_url('js/bootstrap.min.js'); ?>"></script> -->
-		<script src="<?php echo asset_url('js/demo.js'); ?>"></script>
-		<script src="<?php echo asset_url('js/messi.js') ?>"></script>
-		<script type='text/javascript'>
+  </div>
+        </div>
+<script src="<?php echo asset_url('js/popup.js') ?>"></script> 
+<script src="<?php echo asset_url('js/bootstrap.min.js'); ?>"></script> 
+<script src="<?php echo asset_url('js/demo.js'); ?>"></script> 
+<script src="<?php echo asset_url('js/messi.js') ?>"></script> 
+<script type='text/javascript'>
 		
 			$(function(){	
 				$('#characterLeft').css('color', 'green');
@@ -179,6 +197,5 @@
 			);
 				/************** end: functions. **************/
 		</script>
-	</body>
+</body>
 </html>
-

@@ -87,7 +87,7 @@ class Home_model extends MY_Model {
 	{
 	//start
 		$user_details = array();
-		$qry ="SELECT Profile_image_name,Profile_image_comment,Profile_tag_comment
+		$qry ="SELECT Profile_image_name,Profile_image_comment,Profile_tag_comment as taghere
 				FROM user_profile
 				WHERE User_id = $User_id";
 		$query = $this->db->query($qry);
@@ -98,6 +98,32 @@ class Home_model extends MY_Model {
 		return $user_details;
 	//end
 	}
+	
+		/* function to identify the valid tag */
+		public function findvalidtag($word){ 
+			 
+			if (preg_match('/#/',$word)) /* find the string has Hash tag or not  - P.S it will be true even the */
+			{
+				/* Check how many Hash tag present */
+				$hasttagcount = substr_count($word, '#');
+				if($hasttagcount == 1){
+				
+					/* Check the first char as Hash tag or not */
+					if(substr($word,0,1) == "#")
+					{
+						return "<a href=''>$word</a>";
+					}else{
+						return "";
+					}
+				}else{
+					return "";
+				}
+			}else{
+				return $word;
+			}
+
+		}
+
 	
 }
 
