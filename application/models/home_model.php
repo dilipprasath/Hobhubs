@@ -99,7 +99,11 @@ class Home_model extends MY_Model {
 	//end
 	}
 	
+<<<<<<< HEAD
 				/* function to identify the valid tag */
+=======
+		/* function to identify the valid tag */
+>>>>>>> e67fc31bb8c1083fa228c0b384f89a9b1a8480c5
 		public function findvalidtag($word){ 
 			 
 			if (preg_match('/#/',$word)) /* find the string has Hash tag or not  - P.S it will be true even the */
@@ -122,7 +126,12 @@ class Home_model extends MY_Model {
 				return $word;
 			}
 
+<<<<<<< HEAD
 			}
+=======
+		}
+
+>>>>>>> e67fc31bb8c1083fa228c0b384f89a9b1a8480c5
 	
 }
 

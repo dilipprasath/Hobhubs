@@ -16,7 +16,7 @@
 <div class="profile_photo_up"></div>
 <input id="lefile" type="file" style="display:none" name="userfile" onchange="this.form.submit();">
 <input id="photoCover" class="input-medium search-query " type="text" onFocus="$('input[id=lefile]').click();">&nbsp;
-<a class="btn btn-success" onclick="$('input[id=lefile]').click();">Browse</a>
+<a class="btn btn-success"  onclick="$('input[id=lefile]').click();">Browse</a>
 <br>
 </form>
 </div>

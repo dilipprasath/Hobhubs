@@ -1,9 +1,8 @@
-
 <div class="container">
-<div class="row-fluid padding1">
-<div class="span6 offset2">
+  <div class="row">  
+  <div class="col-lg-6 margin-t20">
 <h4 class="normal_font">Having problem signing in?</h4><br>
-<form action=""  method="post">
+<form action="#" id="" method="post">
 <label class="radio">
 <input id="rdb1" type="radio" name="toggler" value="1" />I don't know my password</label>
 <div id="blk-1" class="toHide1 toHide" style="display:none">
@@ -14,22 +13,24 @@
 <br>    
 <label class="radio">
 <input id="rdb3" type="radio" name="toggler"  value="3" />I don't know my username</label><br>
+<!--<label class="radio">
+<input id="rdb2" type="radio" name="toggler"  value="2" />I'm having other problems signing in</label>-->
 <div id="blk-2" class="toHide1 toHide" style="display:none">
    <p><small>Enter the username or email address you used to sign in  hobhubs.</small></p>
 <label class="stacked_label">
-<p><input type="text" name="Signmail" value="" class="english-text" size="30" placeholder="Email address"></p></label> 
+<p><input type="text" name="Email" value="" class="english-text" size="30" placeholder="Email address"></p></label> 
 </div>
 <div class="ar_ct_button">
-<input type="submit" value="continue"class="hh_button" />
+<input type="submit" value="continue" class="btn btn-account-recovery btn-success btn-block" />
 </div>
 </form>
 </div>
-</div>
-</div>
-<script type="text/javascript">
+  </div>  
+  </div>
+    <script type="text/javascript">
 $(function() {
     $("[name=toggler]").click(function(){
-            $('.toHide').hide();
+            $('.toHide').hide('slow');
             $("#blk-"+$(this).val()).show('slow');
     });
  });
