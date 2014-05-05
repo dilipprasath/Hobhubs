@@ -96,20 +96,38 @@
 					{
 						foreach($user_profile_details as $row)
 						{
-							$img_name = $row->Profile_image_name; ?>
+						
+						$taghere = $row->taghere;
+						
+						$wordsbyarray = explode(" ",$taghere);
+						$wordlen = count($wordsbyarray);
+						?>
+							<div>
+						<?php
+						for($i = 0;$i<$wordlen;$i++){
+							$retvalue = $this->home_model->findvalidtag($wordsbyarray[$i]);
+							echo $retvalue."&nbsp;";
+						}
+						?>
+						</div>
+						<?php
+						 $img_name = $row->Profile_image_name; ?>
 							<div>
 								<img src="<?php echo base_url()."prof_img/".$img_name; ?>" height="200" width="350">
 							</div>
+							
+							
 						<?php 
 						}
 					}?>
 				</div>
 			</div>
 		</div>
+
+		<script src="<?php echo asset_url('js/messi.js') ?>"></script>
 		<script src="<?php echo asset_url('js/popup.js') ?>"></script>
 		<!--<script src="<?php //echo asset_url('js/bootstrap.min.js'); ?>"></script> -->
 		<script src="<?php echo asset_url('js/demo.js'); ?>"></script>
-		<script src="<?php echo asset_url('js/messi.js') ?>"></script>
 		<script type='text/javascript'>
 		
 			$(function(){	
